@@ -1,0 +1,95 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Basics}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Model types}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Parametric model}{2}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Forward causality}{2}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Backward causality}{2}{subsubsection.1.2.2}
+\contentsline {subsection}{\numberline {1.3}Non parametric model}{2}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Relevant dynamics}{2}{subsection.1.4}
+\contentsline {section}{\numberline {2}Modelling methodology}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Normalization}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Linearization}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Example: Water Tank}{3}{subsection.2.3}
+\contentsline {section}{\numberline {3}Mechanical Systems: Energy and Power}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Example: Train}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Example: Vehicle}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Example: Nonlinear Pendulum}{4}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Example: Gas Turbine}{5}{subsection.3.4}
+\contentsline {section}{\numberline {4}Lagrange Formalism}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}Recipe}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Example: Pendulum on a Cart}{5}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Lagrange Equations for Constrained Systems}{6}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Example: Ball on Wheel}{6}{subsubsection.4.3.1}
+\contentsline {section}{\numberline {5}Hydraulic Systems}{6}{section.5}
+\contentsline {subsection}{\numberline {5.1}Water duct}{6}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Example: Compressibility in Downpipe (HEPP)}{6}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Example: Downpipe of a HEPP}{6}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}Compressibility}{6}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Pelton Turbine}{7}{subsection.5.3}
+\contentsline {section}{\numberline {6}Electric Systems}{7}{section.6}
+\contentsline {subsection}{\numberline {6.1}RLC-Networks}{7}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Lorentz \& Faraday}{7}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Example: Loudspeaker}{7}{subsection.6.3}
+\contentsline {section}{\numberline {7}Thermodynamic Systems}{8}{section.7}
+\contentsline {subsection}{\numberline {7.1}Internal Energy}{8}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Enthalpy}{8}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Ideal gases}{8}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {7.3.1}Adiabatic process}{8}{subsubsection.7.3.1}
+\contentsline {subsection}{\numberline {7.4}Heat Transfer}{8}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Example: Stirred Reactor System}{8}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.6}Example: Heat exchanger}{9}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.7}Example: Gas receiver}{9}{subsection.7.7}
+\contentsline {subsection}{\numberline {7.8}Conservation of Energy, 1. Principle}{9}{subsection.7.8}
+\contentsline {subsection}{\numberline {7.9}2. Principle (Entropy)}{9}{subsection.7.9}
+\contentsline {subsection}{\numberline {7.10}Isentropic process for a perfect gas}{9}{subsection.7.10}
+\contentsline {section}{\numberline {8}Valves}{9}{section.8}
+\contentsline {subsection}{\numberline {8.1}Incompressible}{9}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Compressible}{10}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Gasturbine}{10}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Compressor}{11}{subsection.8.4}
+\contentsline {section}{\numberline {9}Chemical systems}{11}{section.9}
+\contentsline {subsection}{\numberline {9.1}Example: Continuously stirred tank reactor}{11}{subsection.9.1}
+\contentsline {section}{\numberline {10}Model Parametrization}{12}{section.10}
+\contentsline {subsection}{\numberline {10.1}Planning experiments}{12}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Least squares estimation}{12}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Iterative Least Squares}{12}{subsection.10.3}
+\contentsline {subsubsection}{\numberline {10.3.1}Matrix inversion Lemma}{12}{subsubsection.10.3.1}
+\contentsline {subsection}{\numberline {10.4}Exponential Forgetting}{12}{subsection.10.4}
+\contentsline {subsection}{\numberline {10.5}Simplified Recursive LS Algorithm}{12}{subsection.10.5}
+\contentsline {section}{\numberline {11}Analysis of Linear Systems}{13}{section.11}
+\contentsline {subsection}{\numberline {11.1}Normalization}{13}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Linearisation}{13}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Stabilty}{13}{subsection.11.3}
+\contentsline {subsubsection}{\numberline {11.3.1}Lyapunov Stability}{13}{subsubsection.11.3.1}
+\contentsline {subsubsection}{\numberline {11.3.2}Eigenvalues}{13}{subsubsection.11.3.2}
+\contentsline {subsection}{\numberline {11.4}Continuous time transition matrix}{13}{subsection.11.4}
+\contentsline {subsection}{\numberline {11.5}Reachability}{13}{subsection.11.5}
+\contentsline {subsection}{\numberline {11.6}Controllability}{13}{subsection.11.6}
+\contentsline {section}{\numberline {12}Balance Realization}{14}{section.12}
+\contentsline {subsection}{\numberline {12.1}Hurwitz systems}{14}{subsection.12.1}
+\contentsline {section}{\numberline {13}Order reduction}{14}{section.13}
+\contentsline {subsubsection}{\numberline {13.0.1}Calculation of the DC-Gain}{14}{subsubsection.13.0.1}
+\contentsline {subsection}{\numberline {13.1}Singular perturbation}{14}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Example: Equation of eliminated state}{14}{subsection.13.2}
+\contentsline {section}{\numberline {14}Example: Water-propelled rocket}{15}{section.14}
+\contentsline {subsection}{\numberline {14.1}Phase 1: Water-thrust $0<t<t_1$}{15}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Phase 2: Air-thrust, $t_1<t<t_2$}{15}{subsection.14.2}
+\contentsline {section}{\numberline {15}Example: Geostationary Satellite}{16}{section.15}
+\contentsline {subsection}{\numberline {15.1}Assumptions}{16}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}Modelling}{16}{subsection.15.2}
+\contentsline {section}{\numberline {16}Zero Dynamics}{17}{section.16}
+\contentsline {subsection}{\numberline {16.1}Zero Dynamics - Definition}{17}{subsection.16.1}
+\contentsline {subsection}{\numberline {16.2}Minimum Phase}{18}{subsection.16.2}
+\contentsline {subsection}{\numberline {16.3}Summary of the procedure}{18}{subsection.16.3}
+\contentsline {subsection}{\numberline {16.4}Example: Small SISO System}{18}{subsection.16.4}
+\contentsline {section}{\numberline {17}Nonlinear Systems}{19}{section.17}
+\contentsline {subsection}{\numberline {17.1}Stability of Nonlinear First-Order Systems}{19}{subsection.17.1}
+\contentsline {subsection}{\numberline {17.2}Stability of Nonlinear Second-Order Systems}{19}{subsection.17.2}
+\contentsline {subsection}{\numberline {17.3}Example: Critical Nonlinear System}{19}{subsection.17.3}
+\contentsline {subsection}{\numberline {17.4}Lyapunov Principle - General Systems}{19}{subsection.17.4}
+\contentsline {subsection}{\numberline {17.5}Lyapunov Theory}{19}{subsection.17.5}
+\contentsline {subsubsection}{\numberline {17.5.1}Definitions}{19}{subsubsection.17.5.1}
+\contentsline {subsubsection}{\numberline {17.5.2}Theorem 1}{20}{subsubsection.17.5.2}
+\contentsline {subsubsection}{\numberline {17.5.3}Theorem 2}{20}{subsubsection.17.5.3}
+\contentsline {subsubsection}{\numberline {17.5.4}Finding suitable candidate functions}{20}{subsubsection.17.5.4}
+\contentsline {subsubsection}{\numberline {17.5.5}Example}{20}{subsubsection.17.5.5}
