@@ -2,9 +2,9 @@
 
 \usepackage[ngerman]{babel}
 
-\input{../Headerfiles/Packages}
-\input{../Headerfiles/Titles}
-\input{../Headerfiles/Commands}
+\input{Headerfiles/Packages}
+\input{Headerfiles/Titles}
+\input{Headerfiles/Commands}
 \parindent 0pt
 
 \title{System Modeling}
@@ -16,6 +16,10 @@
 \maketitle
 \tableofcontents
 \end{multicols*}
+
+\newpage
+
+Intentionally left blank by Christof Perren.
 
 \newpage
 
@@ -112,6 +116,12 @@ Using a mathematical model fitting data extracted from the real system.
 \item c) signals with \textbf{slow} dynamics
 \end{itemize}
 
+\vfill
+
+\null
+
+\columnbreak
+
 \section{Modelling methodology}
 
 \begin{enumerate}
@@ -128,8 +138,6 @@ $\frac{d}{dt}(\text{reservoir content})=\sum\text{inflows}-\sum\text{outflows}$
 \item \textbf{Validate the model} with experiments that have not been used to identify the system parameters.
 \end{enumerate}
 
-\newpage
-
 \subsection{Normalization}
 	Replace the physical variables z(t),v(t) and w(t) by \textbf{normalized variables x(t), u(t) and y(t)}, which have a magnitude of $\approx$1.
 	
@@ -140,6 +148,12 @@ $\frac{d}{dt}(\text{reservoir content})=\sum\text{inflows}-\sum\text{outflows}$
 	y(t)&=g_0(x(t),u(t))
 	\end{align*}
 	
+\vfill
+
+\null
+
+\columnbreak
+
 \subsection{Linearization}
 	
 Linearize the system around an equilibrium point $(x_e,u_e)$, where $\frac{d}{dt}\vec{x}(t)=0$ and $\frac{d}{dt}y(t)=0$.
@@ -177,9 +191,15 @@ $\overset{\ast}{m}_{out}(t)=A_O\rho v_O(t),\quad v_O(t)=\sqrt{2gh(t)}$
 \note{$A_O$ - area of the outlet, $\rho$ - density of the water, $v_O(t)$ velocity of the water in the outlet}
 \end{enumerate}
 
+\vfill
+
+\null
+
+\columnbreak
+
 \section{Mechanical Systems: Energy and Power}
 
-\importname{Kinetic energy: translation}{$T_t(t)=\frac{1}{2}\left(v_{x,cg}^2+v_{y,cg}^2\right)$}
+\importname{Kinetic energy: translation}{$T_t(t)=\frac{1}{2} m \left(v_{x,cg}^2+v_{y,cg}^2\right)$}
 
 \importname{Kinetic energy: rotation}{$R_r(t)=\frac{1}{2}J\omega^2(t)=\frac{1}{2}\Theta\omega^2(t)$}
 
@@ -188,9 +208,13 @@ $\overset{\ast}{m}_{out}(t)=A_O\rho v_O(t),\quad v_O(t)=\sqrt{2gh(t)}$
 
 \mportant{\note{$\ddt R_r=\omega\dot{\omega}\Theta+\onha \dot{\Theta}\omega^2(t)=P_{torque}=M\cdot\omega\Rightarrow $\hlcyan{$\dot{\omega}\Theta +\onha\dot{\Theta}\omega = M_{ext}$}}}
 
-\importname{Moment of Inertia}{$J=\int_V r_\perp^2 \rho dV$}
+\importname{Moment of Inertia}{$J_C=\int_V r_\perp^2 \rho dV$}
 
 \note{$r_\perp$ is the distance to the axis of rotation.}
+
+\importname{Parallel axis theorem (Steiner’s theorem)}{$J_A = J_C + M r_CA^2$}
+
+\note{$C$ is the center of gravity and $A$ is the point under consideration.}
 
 \importname{Potential energy}{$U(t)=U(x(t),y(t))$}
 
@@ -207,6 +231,12 @@ $\overset{\ast}{m}_{out}(t)=A_O\rho v_O(t),\quad v_O(t)=\sqrt{2gh(t)}$
 \note{where $\theta$ is the angle between $\mathbf{v}$ and $\mathbf{F}$.}
 
 \importname{Power of a torque}{$P=\mathbf{T}\cdot\mathbf{\omega}$}
+
+\vfill
+
+\null
+
+\columnbreak
 
 \subsection{Example: Train}
 
@@ -233,8 +263,6 @@ $F_{grade}$&$mg\sin(\alpha)$
 \end{tabular}
 }
 \end{enumerate}
-
-\newpage
 
 \subsection{Example: Vehicle}
 
@@ -289,8 +317,6 @@ $F_a$&$\frac{1}{2}\rho c_w A v^2(t)$
 
 \mypic{VehicleTorqueDiagram}
 
-\columnbreak
-
 \subsection{Example: Nonlinear Pendulum}
 
 \mypic{Pendulum}
@@ -311,7 +337,11 @@ $+mg\frac{l}{2}\left(-\sin(\varphi(t))\dot{\varphi}(t)\right)+2\sin(\varphi(t))\
 
 \end{enumerate}
 
-\newpage
+\vfill
+
+\null
+
+\columnbreak
 
 \subsection{Example: Gas Turbine}
 
@@ -365,6 +395,12 @@ $\frac{d}{dt}\varphi(t)$&$\omega_2(t)-\omega_1(t)$
 \end{enumerate}
 
 \mypic{GasTurbineSimulink}
+
+\vfill
+
+\null
+
+\columnbreak
 
 \section{Lagrange Formalism}
 
@@ -458,6 +494,12 @@ $\left.+\onha m(2\dot{q}_1\dot{q}_2l(-\sin(q_2)\right)$&=&$0$
 \end{itemize}
 }
 
+\vfill
+
+\null
+
+\columnbreak
+
 \subsubsection{Example: Ball on Wheel}
 
 \mypic{BallOnWheel}
@@ -485,6 +527,12 @@ $\left.+\onha m(2\dot{q}_1\dot{q}_2l(-\sin(q_2)\right)$&=&$0$
 $\begin{bmatrix} \Theta+\vartheta \frac{R^2}{r^2}&-\vartheta\frac{R(R+r)}{r^2}\\-\vartheta\frac{R(R+r)}{r^2}&m(R+r)^2+\vartheta\frac{(R+r)^2}{r^2}\end{bmatrix}\begin{bmatrix}\ddot{\psi}\\\ddot{\chi}\end{bmatrix}=\begin{bmatrix}u\\mg(R+r)\sin(\chi)\end{bmatrix}$\normalsize
 
 \end{enumerate}
+
+\vfill
+
+\null
+
+\columnbreak
 
 \section{Hydraulic Systems}
 
@@ -574,6 +622,12 @@ $\frac{dP}{d\omega}=\alpha_1-2\alpha_2\omega=0\qquad \omega_0=\frac{\alpha_1}{2\
 
 \mportant{$P_{max}=\rho\dot{V}w^2\onha$}
 
+\vfill
+
+\null
+
+\columnbreak
+
 \section{Electric Systems}
 
 \subsection{RLC-Networks}
@@ -638,7 +692,7 @@ Result: $L\cdot C\cdot \frac{d^2}{dt^2}y(t)+R\cdot C\cdot \ddt y(t)+y(t)=u(t)$
 \item \importabflex{r@{ = }l}{
 $L_A\cdot \ddt I(t)$&$-R_A\cdot I(t)-U_{ind}(t)+u(t)$\\
 $\Theta\cdot\ddt \omega(t)$&$T_m(t)-T_l(t)-d\cdot\omega(t)$}
-\item \importabflex{r@{ = }l@{$\Rightarrow$}l}{$U_{ind}(t)\cdot I(t)$&$\kappa\cdot\omega(t)\cdot I(t)$&$U_{ind})=k\cdot \omega$\\$T_{m}(t)\cdot\omega(t)$&$\kappa\cdot I(t)\cdot \omega(t)$&$T_m=k\cdot I(t) $}
+\item \importabflex{r@{ = }l@{$\Rightarrow$}l}{$U_{ind}(t)\cdot I(t)$&$\kappa\cdot\omega(t)\cdot I(t)$&$U_{ind}=k\cdot \omega$\\$T_{m}(t)\cdot\omega(t)$&$\kappa\cdot I(t)\cdot \omega(t)$&$T_m=k\cdot I(t) $}
 \end{enumerate}
 
 \subsection{Lorentz \& Faraday}
@@ -648,6 +702,12 @@ $\Theta\cdot\ddt \omega(t)$&$T_m(t)-T_l(t)-d\cdot\omega(t)$}
 \important{$\vec{F}=q(\vec{v}\times \vec{B})$}
 
 \important{$\vec{U}=-v(\vec{l}\times\vec{B})$}
+
+\vfill
+
+\null
+
+\columnbreak
 
 \subsection{Example: Loudspeaker}
 
@@ -666,7 +726,13 @@ $\vec{F}_1$&$I(t)BD\pi\vec{n}$\\
 
 \mportname{Motor law}{$F(t)=B\cdot n\cdot d\cdot \pi\cdot I(t)=\kappa\cdot I(t)$}
 
-%\mportname{Generator law}{$U_{ind}(t)\=\kappa v(t)=\kappa\cdot \dot{x}(t)$}
+\mportname{Generator law}{$U_{ind}(t)=\kappa v(t)=\kappa\cdot \dot{x}(t)$}
+
+\vfill
+
+\null
+
+\columnbreak
 
 \section{Thermodynamic Systems}
 
@@ -729,9 +795,9 @@ $dU$&$mC_vdT$\\
 $dH$&$mC_pdT$
 }
 
-\important{$PV=nR_iT$}
+\important{$PV=n\bar{R}T=mRT$}
 
-\note{$R_i=\SI{8.314}{\joule\per\kelvin\per\mole}$, Quantity $n$ in $[\si{\per\mole}]$, Pressure $P$ in $[\si{\pascal}]$, Volume $V$ in $[\si{\meter\cubed}]$, Temperature $T$ in $[\si{\kelvin}]$}
+\note{Pressure $P$ in $[\si{\pascal}]$, Volume $V$ in $[\si{\meter\cubed}]$, Quantity $n$ in $[\si{\mole}]$,\\ Universal gas constant $\bar{R}=\SI{8.314}{\joule\per\kelvin\per\mole}$, Temperature $T$ in $[\si{\kelvin}]$,\\ Modified gas constant $R = \bar{R}/M_{gas}$, Molar mass $M_{gas}$}
 
 \important{$R=C_p-C_v$}
 
@@ -754,15 +820,11 @@ $\gamma>1$
 
 \note{$\kappa:$ thermal conductivity in $[\si{\watt\per\kelvin\per\meter}]$}
 
-\important{$\overset{\ast}{Q}=A\cdot\alpha\cdot(T_1-T_2)$}
-
-\note{$\alpha:$ heat transfer coefficient in $[\si{\watt\per\kelvin\per\meter\squared}]$}
-
-\importname{Newtons law}{$\overset{\ast}{Q}=k\cdot(T_1-T_2)$}
+\importname{Newtons law}{$\overset{\ast}{Q}=k \cdot A \cdot(T_1-T_2)$}
 
 \note{$k$: heat transfer coefficient in $[\si{\watt\per\kelvin\per\meter\squared}]$}
 
-\importname{Stefan-Boltzmanns law}{$\overset{\ast}{Q}=\epsilon\cdot\sigma\cdot A\cdot (T_1^4-T_2^4$}
+\importname{Stefan-Boltzmanns law}{$\overset{\ast}{Q}=\epsilon\cdot\sigma\cdot A\cdot (T_1^4-T_2^4)$}
 
 \note{$\epsilon$: Emissivity
 
@@ -801,7 +863,7 @@ $\overset{\ast}{Q}_{out}=k\cdot A\cdot\vartheta(t)$
 \item $mc\frac{d\vartheta(t)}{dt}=u(t)-kA\vartheta(t)$
 \end{enumerate}
 
-\newpage
+\columnbreak
 
 \subsection{Example: Heat exchanger}
 
@@ -809,7 +871,7 @@ $\overset{\ast}{Q}_{out}=k\cdot A\cdot\vartheta(t)$
 
 \mportabflex{l@{ = }l}{
 $\ddt U_{1,j}$&$m_1c_1\frac{d\vartheta_{1o,j}(t)}{dt}=\overset{\ast}{m}_1c_1(\vartheta_{1i,j}(t)-\vartheta_{1o,j}(t))-\overset{\ast}{Q}_j(t)$\\
-$\ddt U_{2,j}$&$m_2c_2\frac{d\vartheta_{2o,j}(t)}{dt}=\overset{\ast}{m}_2c_2(\vartheta_{2i,j}(t)-\vartheta_{2o,j}(t))+\overset{Q}{\ast}_j(t)$
+$\ddt U_{2,j}$&$m_2c_2\frac{d\vartheta_{2o,j}(t)}{dt}=\overset{\ast}{m}_2c_2(\vartheta_{2i,j}(t)-\vartheta_{2o,j}(t))+\overset{\ast}{Q}_j(t)$
 }
 
 \mportant{$\overset{\ast}{Q}_j(t)=kA(\vartheta_{1o,j}(t)-\vartheta_{2o,j}(t))$}
@@ -823,7 +885,7 @@ $\ddt U_{2,j}$&$m_2c_2\frac{d\vartheta_{2o,j}(t)}{dt}=\overset{\ast}{m}_2c_2(\va
 \mportant{\textbf{Adiabatic conditions are assumed.}}
 
 \begin{enumerate}
-\item Input/Output: mass flows $\overset{\ast}{m}_{in/out}(t)$ and enthalpy flows $\overset{H}{\ast}_{in/out}(t)$\\
+\item Input/Output: mass flows $\overset{\ast}{m}_{in/out}(t)$ and enthalpy flows $\overset{\ast}{H}_{in/out}(t)$\\
 \item Reservoirs: mass: $m(t)\quad$  internal energy $U(t)$ Level: $\vartheta(t)$
 \item $\ddt U(t)=\overset{\ast}{H}_{in}(t)-\overset{\ast}{H}_{out}(t)$
 
@@ -904,12 +966,6 @@ $(P,T):\ P^{\frac{1-\gamma}{\gamma}}T$&$const$
 $c_d$ accounts for flow restrictions, friction \& other losses.
 }
 
-\vfill
-
-\null
-
-\columnbreak
-
 \subsection{Compressible}
 
 Isenthalpic process:
@@ -937,6 +993,8 @@ $\gamma=\frac{C_p}{C_v}\qquad C_p-C_v=R$
 $C_p=\frac{R\gamma}{\gamma -1}$
 
 \dahe $\frac{T_2}{T_1}=\left(\frac{P_2}{P_1}\right)^{\frac{\gamma-1}{\gamma}}$
+
+\columnbreak
 
 \importname{$\Pi=\frac{P_2}{P_1}$}{$v_2=\sqrt{2R\frac{\gamma}{\gamma-1}\left(1-\Pi^\frac{\gamma-1}{\gamma}\right)}$}
 
@@ -972,7 +1030,13 @@ where $\Psi_{tr}$ is the value of $\Psi$ and $\Psi_{tr}$ the value of the gradie
 
 \end{enumerate}
 
-\subsection{Gasturbine}
+\vfill
+
+\null
+
+\columnbreak
+
+\subsection{Turbine}
 
 \mypic{GasTurbineThermo}
 
@@ -997,7 +1061,7 @@ $T_t$: shaft torque
 
 \note{$\overset{\ast}{\mu}_t=\overset{\ast}{m}_t\sqrt{\vartheta_3/\vartheta_{3,ref}}/(p_3/p_{3,ref})$: Normalized mass flow
 
-$\Pi_t=\frac{p_3}{p_4}$: Pressure ratio
+$\Pi_t=\frac{p_3}{p_4}$: Turbine pressure ratio
 
 $A_{vnt}$: Turbine inlet area
 }
@@ -1050,7 +1114,13 @@ $T_c$ Torque absorbed by compressor
 
 \important{$\vartheta_2=\vartheta_1\cdot\left[1+\frac{1}{\eta_c}\left(\Pi_c^{(\kappa-1)/\kappa}-1\right)\right]$}
 
-\note{$\Pi_C=\frac{p_2}{p_1}$}
+\note{$\Pi_C=\frac{p_2}{p_1}$: Compressor pressure ratio}
+
+\vfill
+
+\null
+
+\columnbreak
 
 \section{Chemical systems}
 
@@ -1080,6 +1150,8 @@ $T_c$ Torque absorbed by compressor
 
 \mypic{Arrhenius}
 
+\importname{\note{Enthalpy flow of a fluid}}{$\overset{\ast}{H}_{flow}=\overset{\ast}{m} \cdot c_p \cdot \vartheta(t)$}
+
 \subsection{Example: Continuously stirred tank reactor}
 
 \note{
@@ -1104,9 +1176,9 @@ $T_c$ Torque absorbed by compressor
 \end{itemize}
 \item Conservation laws:
 \begin{itemize}
-\item $\ddt n_A(t)=\overset{\ast}{V}[A_i(t)]-\overset{\ast}{V}A(t)-Vk^-[B]e^{-E/(R\vartheta(t))}[A(t)]$
+\item $\ddt n_A(t)=\overset{\ast}{V}[A_i(t)]-\overset{\ast}{V}[A(t)]-Vk^-[B]e^{-E/(R\vartheta(t))}[A(t)]$
 \item $\ddt n_C(t)=-\overset{\ast}{V}[C(t)]+Vk^-[B]e^{-E/(R\vartheta)}[A(t)]$
-\item $\ddt U(\vartheta(t),n_A(t),n_B(t),n_C(t))=\overset{\ast}{H}_i(\vartheta_i(t))-\overset{\ast}{H}_i(\vartheta_i))+\overset{\ast}{Q}(t)$
+\item $\ddt U(\vartheta(t),n_A(t),n_B(t),n_C(t))=\overset{\ast}{H}_i(\vartheta_i(t))-\overset{\ast}{H}_o(\vartheta(t))+\overset{\ast}{Q}(t)$
 \end{itemize}
 \item \begin{tabular}{l@{ = }l}$dU(\vartheta,n_A,n_B,n_C)$&$\frac{\partial U}{\partial \vartheta}d\vartheta+\frac{\partial U}{\partial n_A}dn_A+\frac{\partial U}{\partial n_B}dn_B+\frac{\partial U}{\partial n_c}dn_C$\\ &$\rho V c_vd\vartheta+H_Adn_A+H_Bdn_B+H_Cdn_C$\end{tabular}
 \item \begin{tabular}{l@{ = }l}
@@ -1128,7 +1200,9 @@ Static behaviour of the CSTR:
 \end{itemize}
 }
 
-\important{$\overset{\ast}{H}_{flow}(\vartheta)+\overset{\ast}{Q}_{chem}(\vartheta)=0\qquad \overset{\ast}{H}_{flow}=\overset{\ast}{m}c_p(\vartheta_i-\vartheta)$}
+\important{$\overset{\ast}{H}_{flow}(\vartheta)+\overset{\ast}{Q}_{chem}(\vartheta)=0$}
+
+%\important{$\overset{\ast}{H}=\overset{\ast}{m}c_p(\vartheta_i-\vartheta)$}
 
 \important{$\overset{\ast}{Q}_{chem}(\vartheta)=H_0\frac{Vke^{-E/(R\vartheta)}}{1+\tau ke^{-E/(R\vartheta)}}[A_i]$}
 
@@ -1296,6 +1370,12 @@ Modification with $0<\gamma<2$ for convergence, $0<\lambda<1$ for forgetting
 \end{itemize}
 }
 
+\vfill
+
+\null
+
+\columnbreak
+
 \section{Analysis of Linear Systems}
 
 \subsection{Normalization}
@@ -1435,7 +1515,13 @@ For stability analysis $u=0$ and $x(t)=\Phi(t)x(0)$!
 
 \note{If $\text{rank}(\mathcal{O}_n=n)$ the system is observable.}
 
-\section{Balance Realization}
+\vfill
+
+\null
+
+\columnbreak
+
+\section{Balanced Realization and Order Reduction}
 
 The Gramian matrices only exist if the system is asymptotically stable!
 
@@ -1460,13 +1546,10 @@ $AW_R+W_RA^T$&$=-BB^T$\\
 $A^TW_O+W_OA$&$=-C^TC$
 }
 
-\vfill
-
-\null
-
-\columnbreak
-
-\section{Order reduction}
+%\vfill
+%\null
+%\columnbreak
+%\section{Order reduction}
 
 Assume that the last $\nu$ elements $\sigma_j$ with $j=n-\nu+1$ are substantially smaller than the other first $n-\nu$ elements $\sigma_i$ with $i=1,\ldots, n-\nu$. Then the contribution of the last $\nu$ balanced modes may be negleted.
 
@@ -1542,249 +1625,7 @@ $\ddt\tilde{x}_1=0\Rightarrow \tilde{x}_1=-0.03\tilde{x}_2-0.04\tilde{x}_3+0.22\
 
 \null
 
-\newpage
-
-\section{Example: Water-propelled rocket}
-
-\mypic{WPR}
-
-\mportant{$V_W(0) = \frac{m_w(0)}{\rho_w}\qquad V_a(0)=V_l-V_w$}
-
-\mportable{
-$0<t<t_1:$&Lift force due to water jet.\\
-$t_1<t<t_2:$&Thrust due to pressurized air.\\
-$t>t_2:$&Ballistic mode
-}
-
-\textbf{A Hybrid System changes its dynamic behavior depending on discrete events.}
-
-\finn
-
-Assumptions
-\note{\begin{itemize}
-\item Only vertical motion is modelled.
-\item Only gravity and thrust forces are considered. No aerodynamic forces.
-\item Isentropic expansion of the air.
-\item $m_a\ll m_w$.
-\item The fluid flow through the nozzle is modelled with Bernoulli's law. (Incompressible fluid without friction)
-\end{itemize}
-}
-
-\vfill
-
-\null
-
 \columnbreak
-
-\subsection{Phase 1: Water-thrust $0<t<t_1$}
-
-\mypic{WPRPhase1}
-
-\mportname{Momentum conservation law}{$dB(t)=F_{ext}(t)\cdot dt = -g\cdot m(t)\cdot dt=m(t)\cdot dv(t)-dm(t)\cdot w(t)$}
-
-\mportname{Water mass flow}{$\frac{dm(t)}{dt}=\overset{\ast}{m}=\rho\cdot F\cdot w(t)$}
-
-Dynamic equations:
-\importabflex{l@{ = }l}{
-$m(t)\cdot\ddt v(t)$&$-g\cdot m(t)+\underbrace{\rho\cdot F\cdot w^2(t)}_{T_w}$\\
-$\ddt m_R(t)$&$-\rho\cdot F\cdot w(t)$
-}
-
-\mypic{WPRNozzle}
-
-\important{$\onha\cdot\rho\cdot w^2(t)+p_a=p(t)\Rightarrow w(t)=\sqrt{\frac{2}{\rho}}\cdot\sqrt{p(t)-p_a}$}
-
-\important{$V(t)=V_l-\frac{m_w(t)}{\rho}\qquad p(t)=\left(\frac{V(0)}{V(t)}\right)^\kappa \cdot p(0)$}
-\vfill
-
-\null
-
-\columnbreak
-
-\subsection{Phase 2: Air-thrust, $t_1<t<t_2$}
-
-\mportant{$m_{air}(t_1)=m_{air}(0)$}
-
-\mportant{$dB(t)=m(t)\cdot dv(t)-\underbrace{dm(t)\cdot w(t)}_{=0}$}
-
-\mportant{$m_R\cdot\frac{dv(t)}{dt}=-m_R\cdot g+\underbrace{\rho_{air}\cdot F\cdot w^2(t)}_{T_{air}}$}
-
-\important{$T_{air}(t)=\underbrace{\rho_{air}\cdot F\cdot w(t)}_{\overset{\ast}{m}_{air}(t)}\cdot w(t)=\overset{\ast}{m}_{air}(t)\cdot\frac{\overset{\ast}{m}_{air}(t)}{\rho_{air}\cdot F}$}
-
-\mportant{$\overset{\ast}{m}_{air}(t)=c_d\cdot F\frac{p_{in}(t)}{\sqrt{R\cdot\vartheta_{in}(t)}}\Psi(p_{in}(t),p_{out}(t))$}
-
-\note{$\Psi(p_{in}(t),p_{out}(t))=\begin{cases}\frac{1}{\sqrt{2}}&\text{for }2p_{out}<p_{in}\\\sqrt{\frac{2p_{out}}{p_{in}}\left[1-\frac{p_{out}}{p_{in}}\right]}&\text{for }2p_{out}\geq p_{in}\end{cases}$
-
-$p_{in}$ pressure inside the rocket, $p_{out}$ pressure of atmosphere, $\vartheta_{in}$ temperature of air in the rocket}
-
-\mportant{$\ddt p(t)=\frac{\kappa R}{V}\{-\overset{\ast}{m}_{out}(t)\vartheta(t)$}
-
-\note{$V_l:$ total volume of the rocket $\vartheta(t)$ temperature of air in the rocket}
-
-\mportant{$\ddt\vartheta = \frac{\vartheta(t) (t)R}{p(t)\cdot V_l c_v}\{-c_p\overset{\ast}{m}_{out}(t)\vartheta(t)+\overset{\ast}{m}_{out}(t)\vartheta(t)\}=-\frac{\vartheta^2(t)R^2}{p(t)V_lc_v}\cdot \overset{\ast}{m}_{out}(t)$}
-
-\vfill
-
-\null
-
-\newpage
-
-\section{Example: Geostationary Satellite}
-
-\mypic{Satelite}
-
-\note{
-\mportable{
-$R:$&radius of the earth\\
-$M:$&mass of the earth\\
-$m:$&mass of the satellite\\
-$r(t):$&dist. Earth center to satellite\\
-$\varphi(t):$&orbit angle of the satellite\\
-$F_r(t):$&radial force\\
-$F_\varphi(t):$&tangential force
-}
-}
-
-\subsection{Assumptions}
-
-\begin{itemize}
-\ncompaq
-\item No other celestial bodies considered.
-\item $M\gg m$ C.O.G. located at center of the Earth
-\item satellite always remains in the equatorial plane\dahe 2 variables are sufficient to describe its position $r(t)$ and $\varphi(t)$
-\item the attitude (orientation) of the satellite is kept constant (by an inner control system) \dahe $F_r(t)$ and $F_\varphi(t)$ are independent
-\end{itemize}
-
-\subsection{Modelling}
-
-\begin{enumerate}
-\ncompaq
-\item \begin{tabular}{lll}Inputs:&radial force&$F_r(t)$\\
-&tangential force&$F_\varphi(t)$\\
-Outputs&Earth to satellite distance&$r(t)$\\
-&orbit angle&$\varphi(t)$
-\end{tabular}
-\item Energies involved:
-
-kinetic energy $T(r,\dot{r},\dot{\varphi})=\onha m\dot{r}^2+\onha m(r\dot{\varphi})^2$
-
-potential energy V: $\mathbf{F}_{grav}/r)=m\mathbf{G}_{Earth}(r)=m\frac{GM}{r^2}\mathbf{u}$
-
-\note{$G=\SI{6.673e-11}{\meter\cubed\per\second\squared\per\kilo\gram}$
-
-$M=\SI{5.97410e24}{\kilo\gram}$
-
-$R=\SI{6.36719e6}{\meter}$
-}
-\item Energy needed to bring the satellite from R to r:
-
-\mportant{$V(r)=\int_R^rF(\rho)d\rho=GMm\left(\frac{1}{R}-\frac{1}{r}\right)\qquad r>R$}
-
-\mypic{SatelitePotential}
-
-\note{$V_\infty=GMm(\frac{1}{R}$}
-
-\item Mimimum Speed to reach orbit:
-
-\mportname{energy balance}{$\onha m v_0^2 = GMm\left(\frac{1}{R}-\frac{1}{r}\right)=(\Delta V_{grav})_{R\rightarrow r}$}
-
-\important{$v_0(r)=\sqrt{2GM\left(\frac{1}{R}-\frac{1}{r}\right)}$}
-
-\note{Escape velocity is $v_0(r\rightarrow\infty)=\sqrt{\frac{2GM}{R}}=\SI{11.2}{\kilo\meter\per\second}$
-
-It is the velocity that is requiered to completly leave the influence of the gravitational field of the earth.
-}
-
-\item Lagrange formalism
-
-\mportabflex{l@{ = }l}{
-$\ddt \left[\frac{\partial L}{\partial \dot{r}}\right]-\frac{\partial L}{\partial r}$&$F_r$\\
-$\ddt\left[\frac{\partial L}{\partial\dot{\varphi}}\right]-\frac{\partial L}{\partial\varphi}$&$F_\varphi r$}
-
-\mportant{$L=T-V=\onha m\dot{r}^2+\onha m(r\dot{\varphi})^2-GMm\left(\frac{1}{R}-\frac{1}{r}\right)$}
-
-\mportabflex{ll}{
-$\frac{\partial L}{\partial\dot{r}}=m\dot{r}$&$\frac{\partial L}{\partial\dot{\varphi}}=mr^2\dot{\varphi}$\\
-$ddt\left(\frac{\partial L}{\partial \dot{r}}\right)=m\ddot{r}$&$\ddt\left(\frac{\partial L}{\partial\dot{\varphi}}\right)=mr^2\ddot{\varphi}+2mr\dot{\varphi}\dot{r}$\\
-$\frac{\partial L}{\partial r}=mr\dot{\varphi}^2-GMm\frac{1}{r^2}$&$\frac{\partial L}{\partial\varphi}=0$
-}
-
-\importabflex{l@{ = }l}{
-$m\ddot{r}$&$mr\dot{\varphi}^2-GMm\frac{1}{r^2}+F_r$\\
-$mr^2\ddot{\varphi}$&$-2mr\dot{\varphi}\dot{r}+F_\varphi r$
-}
-
-\note{Control accelerations: $u_r=\frac{F_r}{m}$ and $u_\varphi=\frac{F_\varphi}{m}$}
-
-\importabflex{l@{ = }l}{
-$\ddot{r}$&$r\dot{\varphi}^2-GM\frac{1}{r^2}+u_r$\\
-$\ddot{\varphi}$&$-2\dot{\varphi}\dot{r}\frac{1}{r}+\frac{1}{r}u_\varphi$
-}
-
-Geostationary Conditions:
-
-\mportant{$u_r=0,\quad \ddot{r}=0,\quad \dot{r}=0,\quad r=r_0$}
-
-\mportant{$u_\varphi=0,\quad\ddot{\varphi}=0,\quad \dot{\varphi}=\omega_0,\quad\varphi=\omega_0 t$}
-
-\important{$\omega_0=\frac{2\pi}{day}=\omega_0=\SI{7.2910e-5}{\radian\per\second}$}
-
-\note{where 1 sideral day = 23h 56 min 4.1s }
-
-\important{$r_0=\left(\frac{GM}{\omega_0^2}\right)^{1/3}\approx\SI{4.22e7}{\meter}$}
-
-\note{\begin{itemize}
-\item $r_0$ is approximately 6.2 times the radius of the earth.
-\item The energy required is more than 80\% of the escape energy.
-\item The resulting tangential speed is $v_\varphi=r_0\omega_0\approx \SI{10800}{\kilo\meter\per\hour}$
-\end{itemize}}
-
-\item State space formulation
-
-\mportant{$x_1(t)=r,\ x_2(t)=\dot{r},\ u_1(t)=u_r$}
-
-\mportant{$x_3(t)=\varphi,\ x_4(t)=\dot{\varphi},\ u_2(t)=u_\varphi$}
-
-
-\mportant{$x(t)=\begin{bmatrix}x_1(t)\\x_2(t)\\x_3(t)\\x_4(t)\end{bmatrix}\qquad u(t)=\begin{bmatrix}u_1(t)\\u_2(t)\end{bmatrix}$}
-
-\finn
-
-\mportant{$\ddt x(t)=f(x(t),u(t))$}
-
-\mportant{$f(t)=\begin{bmatrix}x_2(t)\\x_1 x_4^2(t)-GM/x_1^2(t)+u_1(t)\\x_4(t)\\-2x_2(t)x_4(t)/x_1(t)+u_2(t)/x_1(t)\end{bmatrix}$}
-
-\mportant{$y(t)=h(x(t))=\begin{bmatrix}x_1(t)/r_0\\x_3(t)\end{bmatrix}$}
-
-\finn
-
-Linearization around $x_0(t)\begin{bmatrix}r_0\\0\\\omega_0 t\\\omega_0\end{bmatrix}\qquad u_0(t)=\begin{bmatrix}0\\0\end{bmatrix}$
-
-Thus we end up with:
-
-\small
-$\left[\begin{tabular} {c|c} A & b\\ \hline  c & d\end{tabular}\right]$=$\left[\begin{tabular}{cccc|cc}
-	0 & 1 & 0 & 0 & 0 & 0\\
-	$3\omega_0^2$ & 0 & 0 & $2r_0\omega_0$&1&0\\
-	0&0&0&1&0&0\\
-	0&$-2\omega_0/r_0$&0&0&0&$1/r_0$\\
-	\hline
-	$1/r_0$&0&0&0&0&0\\
-	0&0&1&0&0&0
-	\end{tabular}\right]
-	$\normalsize
-	
-\item System analysis
-\note{
-\begin{itemize}
-\item The system is completly controllable and observable if all sensors and actuators function.
-\item If the radial thruster fails the satellite remains completely controllable.
-\item If the tangential thruster fails the satellite is no longer completely controllable.
-\item If the radial sensor fails the satellite remains completely observable.
-\item If the tangential sensor fails the satellite is no longer completely observable.}
-\end{itemize}
-
-\end{enumerate}
 
 \section{Zero Dynamics}
 
@@ -1813,12 +1654,6 @@ $y(t)$&$\begin{bmatrix}\textcolor{orange}{b_0}&\cdots&\textcolor{orange}{b_{n-r-
 }
 
 \note{This is the controller canonical form.}
-
-\vfill
-
-\null
-
-\columnbreak
 
 \subsection{Zero Dynamics - Definition}
 
@@ -2107,7 +1942,7 @@ $\ddt x_2$&$x_2^3$
 
 \mportant{$x_2(t)=\frac{x_{2,0}}{\sqrt{1-2tx_{2,0}^2}}$}
 
-\note{With $\lim t\rightarrow 1/2x_{2,0}^2)\Rightarrow x_2(t)$ \dahe escapes to infinity.}
+\note{With $\lim t\rightarrow 1/2x_{2,0}^2\Rightarrow x_2(t)$ \dahe escapes to infinity.}
 
 \subsection{Lyapunov Principle - General Systems}
 
@@ -2201,58 +2036,254 @@ Therefore at least the region $||x||^2=x_1^2+x_2^2<1$ must be part of the region
 
 \mypic{VectorField}
 
+\vfill
+
+\null
+
+\newpage
+
+\section{Example: Water-propelled rocket}
+
+\mypic{WPR}
+
+\mportant{$V_W(0) = \frac{m_w(0)}{\rho_w}\qquad V_a(0)=V_l-V_w$}
+
+\mportable{
+$0<t<t_1:$&Lift force due to water jet.\\
+$t_1<t<t_2:$&Thrust due to pressurized air.\\
+$t>t_2:$&Ballistic mode
+}
+
+\textbf{A Hybrid System changes its dynamic behavior depending on discrete events.}
+
+\finn
+
+Assumptions
+\note{\begin{itemize}
+\item Only vertical motion is modelled.
+\item Only gravity and thrust forces are considered. No aerodynamic forces.
+\item Isentropic expansion of the air.
+\item $m_a\ll m_w$.
+\item The fluid flow through the nozzle is modelled with Bernoulli's law. (Incompressible fluid without friction)
+\end{itemize}
+}
+
+\vfill
+
+\null
+
+\columnbreak
+
+\subsection{Phase 1: Water-thrust $0<t<t_1$}
+
+\mypic{WPRPhase1}
+
+\mportname{Momentum conservation law}{$dB(t)=F_{ext}(t)\cdot dt = -g\cdot m(t)\cdot dt=m(t)\cdot dv(t)-dm(t)\cdot w(t)$}
+
+\mportname{Water mass flow}{$\frac{dm(t)}{dt}=\overset{\ast}{m}=\rho\cdot F\cdot w(t)$}
+
+Dynamic equations:
+\importabflex{l@{ = }l}{
+$m(t)\cdot\ddt v(t)$&$-g\cdot m(t)+\underbrace{\rho\cdot F\cdot w^2(t)}_{T_w}$\\
+$\ddt m_R(t)$&$-\rho\cdot F\cdot w(t)$
+}
+
+\mypic{WPRNozzle}
+
+\important{$\onha\cdot\rho\cdot w^2(t)+p_a=p(t)\Rightarrow w(t)=\sqrt{\frac{2}{\rho}}\cdot\sqrt{p(t)-p_a}$}
+
+\important{$V(t)=V_l-\frac{m_w(t)}{\rho}\qquad p(t)=\left(\frac{V(0)}{V(t)}\right)^\kappa \cdot p(0)$}
+\vfill
+
+\null
+
+\columnbreak
+
+\subsection{Phase 2: Air-thrust, $t_1<t<t_2$}
+
+\mportant{$m_{air}(t_1)=m_{air}(0)$}
+
+\mportant{$dB(t)=m(t)\cdot dv(t)-\underbrace{dm(t)\cdot w(t)}_{=0}$}
+
+\mportant{$m_R\cdot\frac{dv(t)}{dt}=-m_R\cdot g+\underbrace{\rho_{air}\cdot F\cdot w^2(t)}_{T_{air}}$}
+
+\important{$T_{air}(t)=\underbrace{\rho_{air}\cdot F\cdot w(t)}_{\overset{\ast}{m}_{air}(t)}\cdot w(t)=\overset{\ast}{m}_{air}(t)\cdot\frac{\overset{\ast}{m}_{air}(t)}{\rho_{air}\cdot F}$}
+
+\mportant{$\overset{\ast}{m}_{air}(t)=c_d\cdot F\frac{p_{in}(t)}{\sqrt{R\cdot\vartheta_{in}(t)}}\Psi(p_{in}(t),p_{out}(t))$}
+
+\note{$\Psi(p_{in}(t),p_{out}(t))=\begin{cases}\frac{1}{\sqrt{2}}&\text{for }2p_{out}<p_{in}\\\sqrt{\frac{2p_{out}}{p_{in}}\left[1-\frac{p_{out}}{p_{in}}\right]}&\text{for }2p_{out}\geq p_{in}\end{cases}$
+
+$p_{in}$ pressure inside the rocket, $p_{out}$ pressure of atmosphere, $\vartheta_{in}$ temperature of air in the rocket}
+
+\mportant{$\ddt p(t)=\frac{\kappa R}{V}\{-\overset{\ast}{m}_{out}(t)\vartheta(t)$}
+
+\note{$V_l:$ total volume of the rocket $\vartheta(t)$ temperature of air in the rocket}
+
+\mportant{$\ddt\vartheta = \frac{\vartheta(t) (t)R}{p(t)\cdot V_l c_v}\{-c_p\overset{\ast}{m}_{out}(t)\vartheta(t)+\overset{\ast}{m}_{out}(t)\vartheta(t)\}=-\frac{\vartheta^2(t)R^2}{p(t)V_lc_v}\cdot \overset{\ast}{m}_{out}(t)$}
+
+\vfill
+
+\null
+
+\newpage
+
+\section{Example: Geostationary Satellite}
+
+\mypic{Satelite}
+
+\note{
+\mportable{
+$R:$&radius of the earth\\
+$M:$&mass of the earth\\
+$m:$&mass of the satellite\\
+$r(t):$&dist. Earth center to satellite\\
+$\varphi(t):$&orbit angle of the satellite\\
+$F_r(t):$&radial force\\
+$F_\varphi(t):$&tangential force
+}
+}
+
+\subsection{Assumptions}
+
+\begin{itemize}
+\ncompaq
+\item No other celestial bodies considered.
+\item $M\gg m$ C.O.G. located at center of the Earth
+\item satellite always remains in the equatorial plane\dahe 2 variables are sufficient to describe its position $r(t)$ and $\varphi(t)$
+\item the attitude (orientation) of the satellite is kept constant (by an inner control system) \dahe $F_r(t)$ and $F_\varphi(t)$ are independent
+\end{itemize}
+
+\subsection{Modelling}
+
+\begin{enumerate}
+\ncompaq
+\item \begin{tabular}{lll}Inputs:&radial force&$F_r(t)$\\
+&tangential force&$F_\varphi(t)$\\
+Outputs&Earth to satellite distance&$r(t)$\\
+&orbit angle&$\varphi(t)$
+\end{tabular}
+\item Energies involved:
+
+kinetic energy $T(r,\dot{r},\dot{\varphi})=\onha m\dot{r}^2+\onha m(r\dot{\varphi})^2$
+
+potential energy V: $\mathbf{F}_{grav}/r)=m\mathbf{G}_{Earth}(r)=m\frac{GM}{r^2}\mathbf{u}$
+
+\note{$G=\SI{6.673e-11}{\meter\cubed\per\second\squared\per\kilo\gram}$
+
+$M=\SI{5.97410e24}{\kilo\gram}$
+
+$R=\SI{6.36719e6}{\meter}$
+}
+\item Energy needed to bring the satellite from R to r:
+
+\mportant{$V(r)=\int_R^rF(\rho)d\rho=GMm\left(\frac{1}{R}-\frac{1}{r}\right)\qquad r>R$}
+
+\mypic{SatelitePotential}
+
+\note{$V_\infty=GMm(\frac{1}{R}$}
+
+\item Mimimum Speed to reach orbit:
+
+\mportname{energy balance}{$\onha m v_0^2 = GMm\left(\frac{1}{R}-\frac{1}{r}\right)=(\Delta V_{grav})_{R\rightarrow r}$}
+
+\important{$v_0(r)=\sqrt{2GM\left(\frac{1}{R}-\frac{1}{r}\right)}$}
+
+\note{Escape velocity is $v_0(r\rightarrow\infty)=\sqrt{\frac{2GM}{R}}=\SI{11.2}{\kilo\meter\per\second}$
+
+It is the velocity that is requiered to completly leave the influence of the gravitational field of the earth.
+}
+
+\item Lagrange formalism
+
+\mportabflex{l@{ = }l}{
+$\ddt \left[\frac{\partial L}{\partial \dot{r}}\right]-\frac{\partial L}{\partial r}$&$F_r$\\
+$\ddt\left[\frac{\partial L}{\partial\dot{\varphi}}\right]-\frac{\partial L}{\partial\varphi}$&$F_\varphi r$}
+
+\mportant{$L=T-V=\onha m\dot{r}^2+\onha m(r\dot{\varphi})^2-GMm\left(\frac{1}{R}-\frac{1}{r}\right)$}
+
+\mportabflex{ll}{
+$\frac{\partial L}{\partial\dot{r}}=m\dot{r}$&$\frac{\partial L}{\partial\dot{\varphi}}=mr^2\dot{\varphi}$\\
+$ddt\left(\frac{\partial L}{\partial \dot{r}}\right)=m\ddot{r}$&$\ddt\left(\frac{\partial L}{\partial\dot{\varphi}}\right)=mr^2\ddot{\varphi}+2mr\dot{\varphi}\dot{r}$\\
+$\frac{\partial L}{\partial r}=mr\dot{\varphi}^2-GMm\frac{1}{r^2}$&$\frac{\partial L}{\partial\varphi}=0$
+}
+
+\importabflex{l@{ = }l}{
+$m\ddot{r}$&$mr\dot{\varphi}^2-GMm\frac{1}{r^2}+F_r$\\
+$mr^2\ddot{\varphi}$&$-2mr\dot{\varphi}\dot{r}+F_\varphi r$
+}
+
+\note{Control accelerations: $u_r=\frac{F_r}{m}$ and $u_\varphi=\frac{F_\varphi}{m}$}
+
+\importabflex{l@{ = }l}{
+$\ddot{r}$&$r\dot{\varphi}^2-GM\frac{1}{r^2}+u_r$\\
+$\ddot{\varphi}$&$-2\dot{\varphi}\dot{r}\frac{1}{r}+\frac{1}{r}u_\varphi$
+}
+
+Geostationary Conditions:
+
+\mportant{$u_r=0,\quad \ddot{r}=0,\quad \dot{r}=0,\quad r=r_0$}
+
+\mportant{$u_\varphi=0,\quad\ddot{\varphi}=0,\quad \dot{\varphi}=\omega_0,\quad\varphi=\omega_0 t$}
+
+\important{$\omega_0=\frac{2\pi}{day}=\omega_0=\SI{7.2910e-5}{\radian\per\second}$}
+
+\note{where 1 sideral day = 23h 56 min 4.1s }
+
+\important{$r_0=\left(\frac{GM}{\omega_0^2}\right)^{1/3}\approx\SI{4.22e7}{\meter}$}
+
+\note{\begin{itemize}
+\item $r_0$ is approximately 6.2 times the radius of the earth.
+\item The energy required is more than 80\% of the escape energy.
+\item The resulting tangential speed is $v_\varphi=r_0\omega_0\approx \SI{10800}{\kilo\meter\per\hour}$
+\end{itemize}}
+
+\item State space formulation
+
+\mportant{$x_1(t)=r,\ x_2(t)=\dot{r},\ u_1(t)=u_r$}
+
+\mportant{$x_3(t)=\varphi,\ x_4(t)=\dot{\varphi},\ u_2(t)=u_\varphi$}
 
 
+\mportant{$x(t)=\begin{bmatrix}x_1(t)\\x_2(t)\\x_3(t)\\x_4(t)\end{bmatrix}\qquad u(t)=\begin{bmatrix}u_1(t)\\u_2(t)\end{bmatrix}$}
+
+\finn
+
+\mportant{$\ddt x(t)=f(x(t),u(t))$}
+
+\mportant{$f(t)=\begin{bmatrix}x_2(t)\\x_1 x_4^2(t)-GM/x_1^2(t)+u_1(t)\\x_4(t)\\-2x_2(t)x_4(t)/x_1(t)+u_2(t)/x_1(t)\end{bmatrix}$}
+
+\mportant{$y(t)=h(x(t))=\begin{bmatrix}x_1(t)/r_0\\x_3(t)\end{bmatrix}$}
+
+\finn
+
+Linearization around $x_0(t)\begin{bmatrix}r_0\\0\\\omega_0 t\\\omega_0\end{bmatrix}\qquad u_0(t)=\begin{bmatrix}0\\0\end{bmatrix}$
+
+Thus we end up with:
+
+\small
+$\left[\begin{tabular} {c|c} A & b\\ \hline  c & d\end{tabular}\right]$=$\left[\begin{tabular}{cccc|cc}
+	0 & 1 & 0 & 0 & 0 & 0\\
+	$3\omega_0^2$ & 0 & 0 & $2r_0\omega_0$&1&0\\
+	0&0&0&1&0&0\\
+	0&$-2\omega_0/r_0$&0&0&0&$1/r_0$\\
+	\hline
+	$1/r_0$&0&0&0&0&0\\
+	0&0&1&0&0&0
+	\end{tabular}\right]
+	$\normalsize
+	
+\item System analysis
+\note{
+\begin{itemize}
+\item The system is completly controllable and observable if all sensors and actuators function.
+\item If the radial thruster fails the satellite remains completely controllable.
+\item If the tangential thruster fails the satellite is no longer completely controllable.
+\item If the radial sensor fails the satellite remains completely observable.
+\item If the tangential sensor fails the satellite is no longer completely observable.}
+\end{itemize}
+
+\end{enumerate}
 
 \end{multicols*}
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
