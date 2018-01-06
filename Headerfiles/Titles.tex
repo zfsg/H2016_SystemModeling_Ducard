@@ -1,0 +1,52 @@
+% Set the color of your style
+% Avaiable are: Apricot, Aquamarine, Bittersweet, Black, Blue, blue, BlueGreen, BlueViolet, BrickRed, Brown, BurntOrange, CadetBlue, CarnationPink, Cerulean, CornflowerBlue, Cyan, Dandelion, DarkOrchid, Emerald, ForestGreen, Fuchsia, Goldenrod, Gray, Green, GreenYellow, JungleGreen, Lavender, ... (more at: http://en.wikibooks.org/wiki/LaTeX/Colors)
+\def\StyleColor{Snow4}
+
+% section color box
+\setkomafont{section}{\mysection}
+
+\newcommand{\mysection}[1]{	
+	\Large\normalfont\scshape
+    \setlength{\fboxsep}{0cm}%already boxed
+    \vspace{0ex}
+    \colorbox{\StyleColor!60}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{4pt}%Space before
+            #1
+            \vspace*{4pt}%Space after
+        \end{minipage}%
+     }
+     \vspace{-1ex}
+}
+
+%subsection color box
+\setkomafont{subsection}{\mysubsection}
+
+\newcommand{\mysubsection}[1]{%
+    \normalsize\normalfont\scshape%
+    \vspace{-2ex}
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{\StyleColor!40}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{4pt}%Space before
+             #1
+            \vspace*{4pt}%Space after
+        \end{minipage}%
+    }
+    \vspace{-2ex}
+}
+  
+\setkomafont{subsubsection}{\mysubsection}
+\newcommand{\mysubsubsection}[1]{%
+    \small\normalfont\scshape%
+    \vspace{-2ex}
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{\StyleColor!5}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{4pt}%Space before
+             #1
+            \vspace*{4pt}%Space after
+        \end{minipage}%
+    }
+    \vspace{-2ex}
+}

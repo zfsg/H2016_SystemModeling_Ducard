@@ -1,0 +1,125 @@
+%begin Packages ------------------------------------------------------
+\newlength{\mylength}
+\setlength{\mylength}{0.6	 cm}
+\usepackage[landscape, top=\mylength, bottom=\mylength, left=\mylength, right=\mylength]{geometry} %pagelayout
+
+\usepackage[ngerman]{babel} %language
+\usepackage[utf8]{inputenc} %language
+\usepackage{multicol} %multiple columns
+\usepackage{multirow} %connect cells of tabular vertically
+\usepackage{amssymb} %math-symbols
+\usepackage{enumitem} %change spaces between listed items [itemsep = x pt]
+\usepackage{graphicx} %include pictures
+\usepackage{tabulary} %tables with linebreaks
+\usepackage{tabularx}
+\usepackage{amsmath} %advanced mathematics
+\usepackage{enumitem} %enumerations
+\usepackage{siunitx} %use units
+\usepackage[dvipsnames]{xcolor} %colors for titles
+\usepackage{mathrsfs} % used for mathscript
+\usepackage{mathtools} %use of rcases*
+\usepackage{listingsutf8}%use of other languages
+\usepackage{esint} %special integrals
+
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\newcolumntype{R}{>{$}r<{$}} % math-mode version of "r" column type
+\newcolumntype{C}{>{$}c<{$}} % math-mode version of "c" column type
+
+
+% Set the color of your style
+% Avaiable are: Apricot, Aquamarine, Bittersweet, Black, Blue, blue, BlueGreen, BlueViolet, BrickRed, Brown, BurntOrange, CadetBlue, CarnationPink, Cerulean, CornflowerBlue, Cyan, Dandelion, DarkOrchid, Emerald, ForestGreen, Fuchsia, Goldenrod, Gray, Green, GreenYellow, JungleGreen, Lavender, ... (more at: http://en.wikibooks.org/wiki/LaTeX/Colors)
+\def\StyleColor{Gray}
+
+% section color box
+\setkomafont{section}{\mysection}
+
+\newcommand{\mysection}[1]{	
+	\Large\normalfont\scshape
+    \setlength{\fboxsep}{0cm}%already boxed
+    \vspace{0ex}
+    \colorbox{\StyleColor}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{4pt}%Space before
+            #1
+            \vspace*{4pt}%Space after
+        \end{minipage}%
+     }
+     \vspace{1ex}
+}
+
+%subsection color box
+\setkomafont{subsection}{\mysubsection}
+
+\newcommand{\mysubsection}[1]{%
+    \normalsize\normalfont\scshape%
+    \vspace{-2ex}
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{\StyleColor!60}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{4pt}%Space before
+             #1
+            \vspace*{4pt}%Space after
+        \end{minipage}%
+    }
+    \vspace{-2ex}
+}
+    
+\setkomafont{subsubsection}{\mysubsection}
+\newcommand{\mysubsubsection}[1]{%
+    \small\normalfont\scshape%
+    \vspace{-2ex}
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{\StyleColor!10}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{4pt}%Space before
+             #1
+            \vspace*{4pt}%Space after
+        \end{minipage}%
+    }
+    \vspace{-2ex}
+}
+
+%-------------------------------------------------------------------
+
+%begin commands
+\newcommand{\finn}{\vspace{1.5ex}}
+
+\newcommand{\fix}{\vspace{-23pt}} %reduce wasted space
+
+\newcommand{\Eofr}{\vec{E}(\vec{r})} 	%Elektrisches Feld
+
+\newcommand{\Bofr}{\vec{B}(\vec{r})}	%Magnetisches Feld
+
+\newcommand{\Hofr}{\vec{H}(\vec{r})}	%Magnetische Erregung
+
+\newcommand{\Fofr}{\vec{F}(\vec{r})}	%Kraftfeld
+
+\newcommand{\Vprod}[2]{\vec{#1}\times\vec{#2}} 	%Vektorprodukt
+
+\newcommand{\dahe}{$\rightarrow$}	%easy arrow outside mathmode
+
+\newcommand{\compaq}{\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}}%compact itemizes
+
+\newcommand{\mypic}[1]{\includegraphics[width=\linewidth]{#1}} %easy including of pictures within the column
+
+\newcommand{\hfull}{\hfill$|$\hfill} %easy seperation of two equations
+%end commands
+
+\newcommand{\longeq}{\hfill$=$\hfill}%easy seperation of an equation
+
+\newcommand{\intinf}[1]{\int_{-\infty}^\infty{#1}}
+
+\newcommand{\expval}[1]{\langle #1\rangle}
+
+\newcommand{\important}[1]{\begin{center}\fbox{#1}\end{center}}
+
+\newcommand{\importname}[2]{\begin{center}\fbox{#2}  #1\end{center}}
+
+\newcommand{\mimportant}[1]{\begin{center}\begin{tabular}{|c|}\hline #1 \\ \hline\end{tabular}\end{center}}
+
+\newcommand{\importable}[1]{\begin{center}\begin{tabular}{|ll|}\hline #1 \\ \hline\end{tabular}\end{center}}
+
+\newcommand{\note}[1]{\footnotesize #1 \normalsize}
+
+\newcommand{\lstfill}{\vspace{4ex}}

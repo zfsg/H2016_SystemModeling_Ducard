@@ -1,0 +1,112 @@
+\newcommand{\finn}{\vspace{1.5ex}}
+
+\newcommand{\fix}{\vspace{-23pt}} %reduce wasted space
+
+\newcommand{\Eofr}{\vec{E}\left(\vec{r}\right)} 	%Elektrisches Feld
+
+\newcommand{\Bofr}{\vec{B}\left(\vec{r}\right)}	%Magnetisches Feld
+
+\newcommand{\Hofr}{\vec{H}\left(\vec{r}\right)}	%Magnetische Erregung
+
+\newcommand{\Fofr}{\vec{F}\left(\vec{r}\right)}	%Kraftfeld
+
+\newcommand{\Vprod}[2]{\vec{#1}\times\vec{#2}} 	%Vektorprodukt
+
+\newcommand{\dahe}{$\rightarrow$ }	%easy arrow outside mathmode
+
+\newcommand{\compaq}{\setlength{\itemsep}{-1mm}\setlength{\parskip}{0cm}}%compact itemizes
+
+\newcommand{\ncompaq}{\setlength{\itemsep}{1mm}\setlength{\parskip}{0cm}}%compact itemizes
+
+\newcommand{\mypic}[1]{\includegraphics[width=\linewidth]{#1}} %easy including of pictures within the column
+
+\newcommand{\hfull}{\hfill$|$\hfill} %easy seperation of two equations
+%end commands
+
+\newcommand{\longeq}{\hfill$=$\hfill}%easy seperation of an equation
+
+\newcommand{\intinf}[1]{\int_{-\infty}^\infty{#1}}
+
+\newcommand{\expval}[1]{\langle #1\rangle}
+
+\newcommand{\important}[1]{\begin{center}\fbox{#1}\end{center}}
+
+\newcommand{\importname}[2]{\begin{center}\fbox{#2}  #1\end{center}}
+
+\newcommand{\mimportant}[1]{\begin{center}\begin{tabular}{|c|}\hline #1 \\ \hline\end{tabular}\end{center}}
+
+\newcommand{\importable}[1]{\begin{center}\begin{tabular}{|ll|}\hline #1 \\ \hline\end{tabular}\end{center}}
+
+\newcommand{\importabflex}[2]{\begin{center}\begin{tabular}{|#1|}\hline #2\\ \hline\end{tabular}\end{center}}
+
+\newcommand{\mportant}[1]{\begin{center}#1\end{center}}
+
+\newcommand{\mportname}[2]{\begin{center}#2$\quad$#1\end{center}}
+
+\newcommand{\mmportant}[1]{\begin{center}\begin{tabular}{c} #1 \end{tabular}\end{center}}
+
+\newcommand{\mportable}[1]{\begin{center}\begin{tabular}{ll}#1\end{tabular}\end{center}}
+
+\newcommand{\mportabflex}[2]{\begin{center}\begin{tabular}{#1}#2\end{tabular}\end{center}}
+
+\newcommand{\note}[1]{\footnotesize #1 \normalsize}
+
+\newcommand{\notelist}[1]{\footnotesize \begin{itemize}\compaq #1\end{itemize}\normalsize}
+
+\newcommand{\lstfill}{\vspace{4ex}}
+
+\newcommand{\inp}[2]{\langle #1 | #2 \rangle} % fast inner product
+
+\newcommand{\bra}[1]{\langle #1 |}
+
+\newcommand{\ket}[1]{| #1 \rangle}
+
+\newenvironment{brsm}{% % short for 'bracketed small matrix'
+  \bigl( \begin{smallmatrix} }{\end{smallmatrix} \bigr)}
+
+\newcommand{\vectwo}[2]{\begin{brsm}#1 \\ #2\end{brsm}}
+
+\newcommand{\element}[2]{\in\mathbb{R}^{#1 \times #2}}
+
+\newcommand{\dive}{\vec{\nabla}\cdot}
+
+\newcommand{\rota}{\vec{\nabla}\times}
+
+\newcommand{\ddt}{\frac{d}{dt}}
+
+\newcommand{\onha}{\frac{1}{2}}
+
+\DeclareRobustCommand{\hlcyan}[1]{{\sethlcolor{Aquamarine1}\hl{#1}}}
+
+\DeclareRobustCommand{\hlyellow}[1]{{\sethlcolor{Yellow1}\hl{#1}}}
+
+\DeclareRobustCommand{\hlpink}[1]{{\sethlcolor{Orchid1}\hl{#1}}}
+
+\DeclareRobustCommand{\hlgreen}[1]{{\sethlcolor{PaleGreen1}\hl{#1}}}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\prob}[1]{\mathbb{P}(#1)}
+
+\newcommand{\expe}[1]{\mathbb{E}[#1]}
+
+\newcommand{\var}[1]{\text{Var}(#1)}
+
+\newcommand{\cov}[1]{\text{Cov}(#1)}
+
+\newcommand{\corr}[1]{\text{Corr}(#1)}
+
+\newcommand{\sign}[1]{\text{sign}(#1)}
+
+\newcommand{\vtabfill}{\vspace{-0.7ex}$\ $}
+
+\newcommand{\lap}[1]{\mathcal{L}(#1)}
+
+\newcommand{\sinc}{\text{sinc}}
+
+\newcommand{\sbs}[4]{\begin{minipage}[t!]{#1\linewidth}#3\end{minipage}\begin{minipage}[t!]{#2\linewidth}#4\end{minipage}}
+
+\newcommand{\sbss}[2]{\sbs{0.45}{0.45}{#1}{#2}}
+
