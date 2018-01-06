@@ -38,13 +38,13 @@
 \BOOKMARK [2][-]{subsection.7.5}{Example: Stirred Reactor System}{section.7}% 38
 \BOOKMARK [2][-]{subsection.7.6}{Example: Heat exchanger}{section.7}% 39
 \BOOKMARK [2][-]{subsection.7.7}{Example: Gas receiver}{section.7}% 40
-\BOOKMARK [2][-]{subsection.7.8}{Conservation of Energy, 1. Principle}{section.7}% 41
+\BOOKMARK [2][-]{subsection.7.8}{1. Principle \(Conservation of Energy\)}{section.7}% 41
 \BOOKMARK [2][-]{subsection.7.9}{2. Principle \(Entropy\)}{section.7}% 42
 \BOOKMARK [2][-]{subsection.7.10}{Isentropic process for a perfect gas}{section.7}% 43
 \BOOKMARK [1][-]{section.8}{Valves}{}% 44
 \BOOKMARK [2][-]{subsection.8.1}{Incompressible}{section.8}% 45
 \BOOKMARK [2][-]{subsection.8.2}{Compressible}{section.8}% 46
-\BOOKMARK [2][-]{subsection.8.3}{Gasturbine}{section.8}% 47
+\BOOKMARK [2][-]{subsection.8.3}{Turbine}{section.8}% 47
 \BOOKMARK [2][-]{subsection.8.4}{Compressor}{section.8}% 48
 \BOOKMARK [1][-]{section.9}{Chemical systems}{}% 49
 \BOOKMARK [2][-]{subsection.9.1}{Example: Continuously stirred tank reactor}{section.9}% 50
@@ -64,31 +64,30 @@
 \BOOKMARK [2][-]{subsection.11.4}{Continuous time transition matrix}{section.11}% 64
 \BOOKMARK [2][-]{subsection.11.5}{Reachability}{section.11}% 65
 \BOOKMARK [2][-]{subsection.11.6}{Controllability}{section.11}% 66
-\BOOKMARK [1][-]{section.12}{Balance Realization}{}% 67
+\BOOKMARK [1][-]{section.12}{Balanced Realization and Order Reduction}{}% 67
 \BOOKMARK [2][-]{subsection.12.1}{Hurwitz systems}{section.12}% 68
-\BOOKMARK [1][-]{section.13}{Order reduction}{}% 69
-\BOOKMARK [2][-]{subsubsection.13.0.1}{Calculation of the DC-Gain}{section.13}% 70
-\BOOKMARK [2][-]{subsection.13.1}{Singular perturbation}{section.13}% 71
-\BOOKMARK [2][-]{subsection.13.2}{Example: Equation of eliminated state}{section.13}% 72
-\BOOKMARK [1][-]{section.14}{Example: Water-propelled rocket}{}% 73
-\BOOKMARK [2][-]{subsection.14.1}{Phase 1: Water-thrust 0<t<t1}{section.14}% 74
-\BOOKMARK [2][-]{subsection.14.2}{Phase 2: Air-thrust, t1<t<t2}{section.14}% 75
-\BOOKMARK [1][-]{section.15}{Example: Geostationary Satellite}{}% 76
-\BOOKMARK [2][-]{subsection.15.1}{Assumptions}{section.15}% 77
-\BOOKMARK [2][-]{subsection.15.2}{Modelling}{section.15}% 78
-\BOOKMARK [1][-]{section.16}{Zero Dynamics}{}% 79
-\BOOKMARK [2][-]{subsection.16.1}{Zero Dynamics - Definition}{section.16}% 80
-\BOOKMARK [2][-]{subsection.16.2}{Minimum Phase}{section.16}% 81
-\BOOKMARK [2][-]{subsection.16.3}{Summary of the procedure}{section.16}% 82
-\BOOKMARK [2][-]{subsection.16.4}{Example: Small SISO System}{section.16}% 83
-\BOOKMARK [1][-]{section.17}{Nonlinear Systems}{}% 84
-\BOOKMARK [2][-]{subsection.17.1}{Stability of Nonlinear First-Order Systems}{section.17}% 85
-\BOOKMARK [2][-]{subsection.17.2}{Stability of Nonlinear Second-Order Systems}{section.17}% 86
-\BOOKMARK [2][-]{subsection.17.3}{Example: Critical Nonlinear System}{section.17}% 87
-\BOOKMARK [2][-]{subsection.17.4}{Lyapunov Principle - General Systems}{section.17}% 88
-\BOOKMARK [2][-]{subsection.17.5}{Lyapunov Theory}{section.17}% 89
-\BOOKMARK [3][-]{subsubsection.17.5.1}{Definitions}{subsection.17.5}% 90
-\BOOKMARK [3][-]{subsubsection.17.5.2}{Theorem 1}{subsection.17.5}% 91
-\BOOKMARK [3][-]{subsubsection.17.5.3}{Theorem 2}{subsection.17.5}% 92
-\BOOKMARK [3][-]{subsubsection.17.5.4}{Finding suitable candidate functions}{subsection.17.5}% 93
-\BOOKMARK [3][-]{subsubsection.17.5.5}{Example}{subsection.17.5}% 94
+\BOOKMARK [3][-]{subsubsection.12.1.1}{Calculation of the DC-Gain}{subsection.12.1}% 69
+\BOOKMARK [2][-]{subsection.12.2}{Singular perturbation}{section.12}% 70
+\BOOKMARK [2][-]{subsection.12.3}{Example: Equation of eliminated state}{section.12}% 71
+\BOOKMARK [1][-]{section.13}{Zero Dynamics}{}% 72
+\BOOKMARK [2][-]{subsection.13.1}{Zero Dynamics - Definition}{section.13}% 73
+\BOOKMARK [2][-]{subsection.13.2}{Minimum Phase}{section.13}% 74
+\BOOKMARK [2][-]{subsection.13.3}{Summary of the procedure}{section.13}% 75
+\BOOKMARK [2][-]{subsection.13.4}{Example: Small SISO System}{section.13}% 76
+\BOOKMARK [1][-]{section.14}{Nonlinear Systems}{}% 77
+\BOOKMARK [2][-]{subsection.14.1}{Stability of Nonlinear First-Order Systems}{section.14}% 78
+\BOOKMARK [2][-]{subsection.14.2}{Stability of Nonlinear Second-Order Systems}{section.14}% 79
+\BOOKMARK [2][-]{subsection.14.3}{Example: Critical Nonlinear System}{section.14}% 80
+\BOOKMARK [2][-]{subsection.14.4}{Lyapunov Principle - General Systems}{section.14}% 81
+\BOOKMARK [2][-]{subsection.14.5}{Lyapunov Theory}{section.14}% 82
+\BOOKMARK [3][-]{subsubsection.14.5.1}{Definitions}{subsection.14.5}% 83
+\BOOKMARK [3][-]{subsubsection.14.5.2}{Theorem 1}{subsection.14.5}% 84
+\BOOKMARK [3][-]{subsubsection.14.5.3}{Theorem 2}{subsection.14.5}% 85
+\BOOKMARK [3][-]{subsubsection.14.5.4}{Finding suitable candidate functions}{subsection.14.5}% 86
+\BOOKMARK [3][-]{subsubsection.14.5.5}{Example}{subsection.14.5}% 87
+\BOOKMARK [1][-]{section.15}{Example: Water-propelled rocket}{}% 88
+\BOOKMARK [2][-]{subsection.15.1}{Phase 1: Water-thrust 0<t<t1}{section.15}% 89
+\BOOKMARK [2][-]{subsection.15.2}{Phase 2: Air-thrust, t1<t<t2}{section.15}% 90
+\BOOKMARK [1][-]{section.16}{Example: Geostationary Satellite}{}% 91
+\BOOKMARK [2][-]{subsection.16.1}{Assumptions}{section.16}% 92
+\BOOKMARK [2][-]{subsection.16.2}{Modelling}{section.16}% 93
