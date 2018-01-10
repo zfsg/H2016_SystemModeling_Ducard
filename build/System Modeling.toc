@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {3.4}Example: Gas Turbine}{6}{subsection.3.4}
 \contentsline {section}{\numberline {4}Lagrange Formalism}{7}{section.4}
 \contentsline {subsection}{\numberline {4.1}Recipe}{7}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Example: Pendulum on a Cart}{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Example: Pendulum P on a Cart C}{7}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Lagrange Equations for Constrained Systems}{7}{subsection.4.3}
 \contentsline {subsubsection}{\numberline {4.3.1}Example: Ball on Wheel}{7}{subsubsection.4.3.1}
 \contentsline {section}{\numberline {5}Hydraulic Systems}{8}{section.5}
@@ -48,47 +48,54 @@
 \contentsline {subsection}{\numberline {8.3}Turbine}{12}{subsection.8.3}
 \contentsline {subsection}{\numberline {8.4}Compressor}{12}{subsection.8.4}
 \contentsline {section}{\numberline {9}Chemical systems}{13}{section.9}
-\contentsline {subsection}{\numberline {9.1}Example: Continuously stirred tank reactor}{13}{subsection.9.1}
-\contentsline {section}{\numberline {10}Model Parametrization}{14}{section.10}
-\contentsline {subsection}{\numberline {10.1}Planning experiments}{14}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Least squares estimation}{14}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Iterative Least Squares}{14}{subsection.10.3}
-\contentsline {subsubsection}{\numberline {10.3.1}Matrix inversion Lemma}{14}{subsubsection.10.3.1}
-\contentsline {subsection}{\numberline {10.4}Exponential Forgetting}{14}{subsection.10.4}
-\contentsline {subsection}{\numberline {10.5}Simplified Recursive LS Algorithm}{14}{subsection.10.5}
-\contentsline {section}{\numberline {11}Analysis of Linear Systems}{16}{section.11}
-\contentsline {subsection}{\numberline {11.1}Normalization}{16}{subsection.11.1}
-\contentsline {subsection}{\numberline {11.2}Linearisation}{16}{subsection.11.2}
-\contentsline {subsection}{\numberline {11.3}Stabilty}{16}{subsection.11.3}
-\contentsline {subsubsection}{\numberline {11.3.1}Lyapunov Stability}{16}{subsubsection.11.3.1}
-\contentsline {subsubsection}{\numberline {11.3.2}Eigenvalues}{16}{subsubsection.11.3.2}
-\contentsline {subsection}{\numberline {11.4}Continuous time transition matrix}{16}{subsection.11.4}
-\contentsline {subsection}{\numberline {11.5}Reachability}{16}{subsection.11.5}
-\contentsline {subsection}{\numberline {11.6}Controllability}{17}{subsection.11.6}
-\contentsline {section}{\numberline {12}Balanced Realization and Order Reduction}{17}{section.12}
-\contentsline {subsection}{\numberline {12.1}Hurwitz systems}{17}{subsection.12.1}
-\contentsline {subsubsection}{\numberline {12.1.1}Calculation of the DC-Gain}{17}{subsubsection.12.1.1}
-\contentsline {subsection}{\numberline {12.2}Singular perturbation}{17}{subsection.12.2}
-\contentsline {subsection}{\numberline {12.3}Example: Equation of eliminated state}{17}{subsection.12.3}
-\contentsline {section}{\numberline {13}Zero Dynamics}{18}{section.13}
-\contentsline {subsection}{\numberline {13.1}Zero Dynamics - Definition}{18}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Minimum Phase}{18}{subsection.13.2}
-\contentsline {subsection}{\numberline {13.3}Summary of the procedure}{19}{subsection.13.3}
-\contentsline {subsection}{\numberline {13.4}Example: Small SISO System}{19}{subsection.13.4}
-\contentsline {section}{\numberline {14}Nonlinear Systems}{20}{section.14}
-\contentsline {subsection}{\numberline {14.1}Stability of Nonlinear First-Order Systems}{20}{subsection.14.1}
-\contentsline {subsection}{\numberline {14.2}Stability of Nonlinear Second-Order Systems}{20}{subsection.14.2}
-\contentsline {subsection}{\numberline {14.3}Example: Critical Nonlinear System}{20}{subsection.14.3}
-\contentsline {subsection}{\numberline {14.4}Lyapunov Principle - General Systems}{20}{subsection.14.4}
-\contentsline {subsection}{\numberline {14.5}Lyapunov Theory}{20}{subsection.14.5}
-\contentsline {subsubsection}{\numberline {14.5.1}Definitions}{20}{subsubsection.14.5.1}
-\contentsline {subsubsection}{\numberline {14.5.2}Theorem 1}{21}{subsubsection.14.5.2}
-\contentsline {subsubsection}{\numberline {14.5.3}Theorem 2}{21}{subsubsection.14.5.3}
-\contentsline {subsubsection}{\numberline {14.5.4}Finding suitable candidate functions}{21}{subsubsection.14.5.4}
-\contentsline {subsubsection}{\numberline {14.5.5}Example}{21}{subsubsection.14.5.5}
-\contentsline {section}{\numberline {15}Example: Water-propelled rocket}{22}{section.15}
-\contentsline {subsection}{\numberline {15.1}Phase 1: Water-thrust $0<t<t_1$}{22}{subsection.15.1}
-\contentsline {subsection}{\numberline {15.2}Phase 2: Air-thrust, $t_1<t<t_2$}{22}{subsection.15.2}
-\contentsline {section}{\numberline {16}Example: Geostationary Satellite}{23}{section.16}
-\contentsline {subsection}{\numberline {16.1}Assumptions}{23}{subsection.16.1}
-\contentsline {subsection}{\numberline {16.2}Modelling}{23}{subsection.16.2}
+\contentsline {subsection}{\numberline {9.1}Example: $NO$-Diesel}{13}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Example: SCR System}{13}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Example: 3 Way Catalytic Converter}{13}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.4}Example: $CH_4$ Synthesis}{13}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.5}Example: Continuously stirred tank reactor}{14}{subsection.9.5}
+\contentsline {section}{\numberline {10}Model Parametrization}{15}{section.10}
+\contentsline {subsection}{\numberline {10.1}Planning experiments}{15}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Least squares estimation}{15}{subsection.10.2}
+\contentsline {subsubsection}{\numberline {10.2.1}Examples: Straight line and parabola}{15}{subsubsection.10.2.1}
+\contentsline {subsubsection}{\numberline {10.2.2}Example: Least Squares on a DC-Motor}{15}{subsubsection.10.2.2}
+\contentsline {subsection}{\numberline {10.3}Iterative Least Squares}{16}{subsection.10.3}
+\contentsline {subsubsection}{\numberline {10.3.1}Matrix inversion Lemma}{16}{subsubsection.10.3.1}
+\contentsline {subsection}{\numberline {10.4}Exponential Forgetting}{16}{subsection.10.4}
+\contentsline {subsection}{\numberline {10.5}Simplified Recursive LS Algorithm}{16}{subsection.10.5}
+\contentsline {section}{\numberline {11}Analysis of Linear Systems}{17}{section.11}
+\contentsline {subsection}{\numberline {11.1}Normalization}{17}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Linearisation}{17}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Stabilty}{17}{subsection.11.3}
+\contentsline {subsubsection}{\numberline {11.3.1}Lyapunov Stability}{17}{subsubsection.11.3.1}
+\contentsline {subsubsection}{\numberline {11.3.2}Eigenvalues}{17}{subsubsection.11.3.2}
+\contentsline {subsection}{\numberline {11.4}Continuous time transition matrix}{17}{subsection.11.4}
+\contentsline {subsection}{\numberline {11.5}Reachability}{17}{subsection.11.5}
+\contentsline {subsection}{\numberline {11.6}Controllability}{18}{subsection.11.6}
+\contentsline {section}{\numberline {12}Balanced Realization and Order Reduction}{18}{section.12}
+\contentsline {subsection}{\numberline {12.1}Hurwitz systems}{18}{subsection.12.1}
+\contentsline {subsubsection}{\numberline {12.1.1}Calculation of the DC-Gain}{18}{subsubsection.12.1.1}
+\contentsline {subsection}{\numberline {12.2}Singular perturbation}{18}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Example: Equation of eliminated state}{18}{subsection.12.3}
+\contentsline {section}{\numberline {13}Zero Dynamics}{19}{section.13}
+\contentsline {subsubsection}{\numberline {13.0.1}State-Space Representation}{19}{subsubsection.13.0.1}
+\contentsline {subsection}{\numberline {13.1}Zero Dynamics - Definition}{19}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Minimum Phase}{20}{subsection.13.2}
+\contentsline {subsection}{\numberline {13.3}Summary of the procedure}{20}{subsection.13.3}
+\contentsline {subsection}{\numberline {13.4}Example: Small SISO System}{20}{subsection.13.4}
+\contentsline {section}{\numberline {14}Nonlinear Systems}{21}{section.14}
+\contentsline {subsection}{\numberline {14.1}Stability of Nonlinear First-Order Systems}{21}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Stability of Nonlinear Second-Order Systems}{21}{subsection.14.2}
+\contentsline {subsection}{\numberline {14.3}Example: Critical Nonlinear System}{21}{subsection.14.3}
+\contentsline {subsection}{\numberline {14.4}Lyapunov Principle - General Systems}{21}{subsection.14.4}
+\contentsline {subsection}{\numberline {14.5}Lyapunov Theory}{21}{subsection.14.5}
+\contentsline {subsubsection}{\numberline {14.5.1}Definitions}{21}{subsubsection.14.5.1}
+\contentsline {subsubsection}{\numberline {14.5.2}Theorem 1}{22}{subsubsection.14.5.2}
+\contentsline {subsubsection}{\numberline {14.5.3}Theorem 2}{22}{subsubsection.14.5.3}
+\contentsline {subsubsection}{\numberline {14.5.4}Finding suitable candidate functions}{22}{subsubsection.14.5.4}
+\contentsline {subsubsection}{\numberline {14.5.5}Example}{22}{subsubsection.14.5.5}
+\contentsline {section}{\numberline {15}Example: Water-propelled rocket}{23}{section.15}
+\contentsline {subsection}{\numberline {15.1}Phase 1: Water-thrust $0<t<t_1$}{23}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}Phase 2: Air-thrust, $t_1<t<t_2$}{23}{subsection.15.2}
+\contentsline {section}{\numberline {16}Example: Geostationary Satellite}{24}{section.16}
+\contentsline {subsection}{\numberline {16.1}Assumptions}{24}{subsection.16.1}
+\contentsline {subsection}{\numberline {16.2}Modelling}{24}{subsection.16.2}
