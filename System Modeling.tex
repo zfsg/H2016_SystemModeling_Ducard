@@ -345,8 +345,8 @@ $+mg\frac{l}{2}\left(-\sin(\varphi(t))\dot{\varphi}(t)\right)+2\sin(\varphi(t))\
 
 \scriptsize
 \begin{itemize}
-\item\textbf{Rotor 2:} Turbine stage, driving torque $T_2$, M.o. inertia: $\Theta_2$
 \item\textbf{Rotor 1:} Compressor stage, breaking torque $T_1$, M.o. inertia $\Theta_1$
+\item\textbf{Rotor 2:} Turbine stage, driving torque $T_2$, M.o. inertia: $\Theta_2$
 \item\textbf{Shaft:} Elasticity constant: $k$
 \item\textbf{Friction losses:} $d_1$ and $d_2$
 \end{itemize}
@@ -385,7 +385,7 @@ $\frac{d}{dt}\left(\frac{1}{2}k\varphi^2(t)\right)$&$-P_{m,3}(t)+P_{m,4}(t)$
 
 \begin{tabular}{l@{ = }l}
 $\Theta_1\frac{d}{dt} \omega_1(t)$&$-T_1(t)-d_1\cdot\omega_1(t)+k\cdot\varphi(t)$\\
-$\Theta_2\frac{d}{dt}\omega_2(t)$&$T_2(t)-d_2\cdot\omega_2(t)-k\varphi(t)$\\
+$\Theta_2\frac{d}{dt}\omega_2(t)$&$T_2(t)-d_2\cdot\omega_2(t)-k\cdot\varphi(t)$\\
 $\frac{d}{dt}\varphi(t)$&$\omega_2(t)-\omega_1(t)$
 \end{tabular}
 \end{enumerate}
@@ -507,9 +507,9 @@ u-ml\dot{q}_2^2\sin(q_2)\\mlg\sin(q_2)
 \mportant{$L(t)=T(t)-U(t)$}
 \item Differential equations including constraints
 
-$n=3,\ \nu=1,\ q_1=\psi,\ q_2=\chi,\ q_3=\phi$
+$n=3,\ \nu=1,\ q_1=\psi,\ q_2=\chi,\ q_3=\varphi$
 
-\mportant{$\ddt(\frac{\partial L}{\partial \dot{q}_k})-\frac{\partial L}{d q_k}-\mu\alpha_k=Q_k$}
+\mportant{$\ddt(\frac{\partial L}{\partial \dot{q}_k})-\frac{\partial L}{\partial q_k}-\mu\alpha_k=Q_k$}
 
 $Q_1=u(t),\ Q_2=Q_3=0,\ \alpha_1\dot{q}_1+\alpha_2\dot{q}_2+\alpha_3\dot{q}_3=0,\ \alpha_1=R,\alpha_2=-(R+r),\ \alpha_3=r$ (Kinematic constraint - no slip condition)
 
@@ -682,7 +682,9 @@ Result: $L\cdot C\cdot \frac{d^2}{dt^2}y(t)+R\cdot C\cdot \ddt y(t)+y(t)=u(t)$
 \item \importabflex{r@{ = }l}{
 $L_A\cdot \ddt I(t)$&$-R_A\cdot I(t)-U_{ind}(t)+u(t)$\\
 $\Theta\cdot\ddt \omega(t)$&$T_m(t)-T_l(t)-d\cdot\omega(t)$}
-\item \importabflex{r@{ = }l@{$\Rightarrow$}l}{$U_{ind}(t)\cdot I(t)$&$\kappa\cdot\omega(t)\cdot I(t)$&$U_{ind}=k\cdot \omega$\\$T_{m}(t)\cdot\omega(t)$&$\kappa\cdot I(t)\cdot \omega(t)$&$T_m=k\cdot I(t) $}
+\item \importabflex{r@{ = }l@{$\Rightarrow$}l}{
+$U_{ind}(t) \cdot I(t)$&$\kappa \cdot \omega(t)\cdot I(t)$&$U_{ind}=\kappa \cdot \omega$\\
+$T_{m}(t) \cdot \omega(t)$&$\kappa \cdot I(t) \cdot \omega(t)$&$T_m=\kappa \cdot I(t) $}
 \end{enumerate}
 
 \subsection{Lorentz \& Faraday}
@@ -1306,8 +1308,9 @@ $\hat{e}=\hat{y}-(ax^2+bx+c)=\hat{y}- \begin{pmatrix} x^2&x&1 \end{pmatrix} \cdo
 
 \subsubsection{Example: Least Squares on a DC-Motor}
 We have conducted two steady-state measurements of $u_i,T_{l,i},\omega_i,I_i$ without significant measurement errors.
-We are now looking for $\kappa$ and $d$ while we know that $R=1$.
-Therefore the vector of unknown parameters is $\pi=\begin{pmatrix} \kappa \\d\end{pmatrix}$ and the weighting matrix $W=\mathbb{I}$.\\
+We are now looking for $\kappa$ and $d$ while we know that $R=1$.\\
+
+Therefore we can conclude that the weighting matrix $W=\mathbb{I}$ and the vector of unknown parameters is $\pi=\begin{pmatrix} \kappa \\d\end{pmatrix}$.\\
 
 Based on the equations:\\
 $L\frac{d}{dt}I(t)=u(t)-RI(t)-\kappa \omega(t)$\\
@@ -1554,7 +1557,7 @@ Is it possible to reconstruct $x(0)$ using the output signal $y(t)$ only?
 
 \important{$\mathcal{O}_n=\begin{bmatrix}C\\CA\\\vdots\\CA^{n-1}\end{bmatrix}$}
 
-If $\text{rank}(\mathcal{O}_n=n)$ the system is observable.
+If $\text{rank}(\mathcal{O}_n)=n$ the system is observable.
 
 \vfill
 
