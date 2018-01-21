@@ -208,7 +208,6 @@ Where $A_O$ - area of the outlet, $\rho$ - density of the water, $v_O(t)$ veloci
 \vfill
 \null
 \newpage
-%\columnbreak
 
 \section{Mechanical Systems: Energy and Power}
 
@@ -248,14 +247,9 @@ Where $\theta$ is the angle between $\mathbf{v}$ and $\mathbf{F}$.
 
 \importname{Power of a torque}{$P=\mathbf{T}\cdot\mathbf{\omega}$}
 
-\vfill
-\null
-\columnbreak
-
 \subsection{Example: Train}
 
 \mypic{Train}
-
 
 \begin{enumerate}
 \ncompaq
@@ -494,8 +488,6 @@ u-ml\dot{q}_2^2\sin(q_2)\\mlg\sin(q_2)
 \end{bmatrix}$
 \end{enumerate}
 
-\vfill
-\null
 \columnbreak
 
 \subsection{Lagrange Equations for Constrained Systems}\label{lagrange+}
@@ -597,13 +589,13 @@ leading to:
 
 \mypic{Compressibility}
 
-\mportant{$\sigma_0=\frac{1}{V_0}\frac{dV}{dP}$}
+\mportant{$\sigma_0=\frac{1}{V_0}\frac{dV}{dp}$}
 
-Where $V_0$: nominal volume, $P$: pressure, $\sigma_0$ compressibility.
+Where $V_0$: nominal/geometrical volume, $p$: pressure and $\sigma_0$ compressibility.
 
 \importabflex{r@{ = }l}{
 $\ddt V(t)$&$\overset{\ast}{V}_{in}(t)-\overset{\ast}{V}_{out}(t)=A_{in}v_{in}(t)-A_{out}v_{out}(t)$\\
-$\Delta P(t)$&$k\Delta V(t)=\frac{1}{\sigma_0V_0}\Delta V(t)$\\
+$p(t)$&$\frac{1}{\sigma_0V_0}\Delta V(t)$\\
 $\Delta V(t)$&$V(t)-V_0$
 }
 
@@ -634,11 +626,7 @@ $\frac{dP}{d\omega}=\alpha_1-2\alpha_2\omega=0\qquad \omega_0=\frac{\alpha_1}{2\
 \columnbreak
 
 \section{Electric Systems}
-
-\subsection{RLC-Networks}
-
 Two classes of reservoirs:
-
 \begin{itemize}
 \item \textbf{magnetic energy:} stored in magnetic fields B
 \item \textbf{electric energy:} stored in electric fields E
@@ -650,15 +638,19 @@ Element&Capacitance&Inductance\\
 \hline
 Energy&$W_E=\frac{1}{2}C\cdot U^2(t)$&$W_M=\onha L\cdot I^2(t)$\\
 \hline
-Level variable&$U(t)$&$I(t)$\\
+Level variable&voltage $U(t)$&current $I(t)$\\
 \hline
 Conservation law&$C\cdot \ddt U(t)=I(t)$&$L\cdot\ddt I(t)=U(t)$
 \end{tabular}
+
+\subsection{RLC-Networks}
 
 Kirchhoff's laws:
 \begin{itemize}
 \item The algebraic sum of all currents in each network node is zero.
 \item The algebraic sum of all voltages following a closed network loop is zero.
+\item Series circuits: $R_G=\sum_{k=1}^nR_k$\\
+\item Parallel circuits: $\frac{1}{R_G}=\sum_{k=1}^n\frac{1}{R_k}$\\
 \end{itemize}
 
 \mypic{RLC}
@@ -679,6 +671,7 @@ Reformulation: $I(t)=C\cdot\ddt y(t),\ \ddt I(t)=C\cdot \frac{d^2}{dt^2}y(t)$
 Result: $L\cdot C\cdot \frac{d^2}{dt^2}y(t)+R\cdot C\cdot \ddt y(t)+y(t)=u(t)$
 \end{enumerate}
 
+\subsection{Motor}
 \small
 \begin{itemize}
 \item \textbf{Classical DC drives} have a mechanical commutation of the current in the rotor coils and constant (permanent magnets) or time-varying stator fields (external excitation).
@@ -694,12 +687,16 @@ Result: $L\cdot C\cdot \frac{d^2}{dt^2}y(t)+R\cdot C\cdot \ddt y(t)+y(t)=u(t)$
 \item \begin{itemize}\item the magnetic energy stored in the rotor coil, $I(t)$
 \item the kinetic energy stored in the rotor, $\omega(t)$\end{itemize}
 \item \importabflex{r@{ = }l}{
-$L_A\cdot \ddt I(t)$&$-R_A\cdot I(t)-U_{ind}(t)+u(t)$\\
+$L_A\cdot \ddt I(t)$&$-R_A\cdot I(t)-U_{ind}(t) +u(t)$\\
 $\Theta\cdot\ddt \omega(t)$&$T_m(t)-T_l(t)-d\cdot\omega(t)$}
 \item \importabflex{r@{ = }l@{$\Rightarrow$}l}{
 $U_{ind}(t) \cdot I(t)$&$\kappa \cdot \omega(t)\cdot I(t)$&$U_{ind}=\kappa \cdot \omega$\\
 $T_{m}(t) \cdot \omega(t)$&$\kappa \cdot I(t) \cdot \omega(t)$&$T_m=\kappa \cdot I(t) $}
 \end{enumerate}
+
+\subsection{Generator}
+Basically the same as in a motor, but the sign of $U_{ind}$ changes:\\
+$L_A\cdot \ddt I(t)=-R_A\cdot I(t)+U_{ind}(t)+u(t)$
 
 \subsection{Lorentz \& Faraday}
 
@@ -709,9 +706,9 @@ $T_{m}(t) \cdot \omega(t)$&$\kappa \cdot I(t) \cdot \omega(t)$&$T_m=\kappa \cdot
 
 \important{$\vec{U}=-v(\vec{l}\times\vec{B})$}
 
-\vfill
-\null
-\columnbreak
+%\vfill
+%\null
+%\columnbreak
 
 \subsection{Example: Loudspeaker}
 
@@ -724,7 +721,7 @@ $\vec{F}_1$&$I(t)BD\pi\vec{n}$\\
 
 \importname{Total force}{$\vec{F}(t)=\underbrace{n\pi D B}_{\kappa}I(t)\vec{n}$}
 
-\mportname{Mechanical part}{$m\cdot\ddot{x}(t)=F(t)-k\cdot x(t)-d\dot{x}(t)$}
+\mportname{Mechanical part}{$m\cdot\ddot{x}(t)=F(t)-k\cdot x(t)-d\cdot \dot{x}(t)$}
 
 \mportname{Electric part}{$L\cdot\ddt I(t)=-R\cdot I(t)-U_{ind}(t)+u(t)$}
 
@@ -813,7 +810,6 @@ $PV^\gamma = const,\quad TV^{\gamma-1}=const,\quad P^{1-\gamma}T^\gamma=const$
 
 $\gamma>1$
 
-
 \importname{Isothermal process}{$PV=const$}
 
 \subsection{Heat Transfer}
@@ -832,72 +828,15 @@ Where \\
 $\epsilon$: Emissivity \\
 $\sigma$: Stefan-Boltzmann constant $\sigma=\SI{5.6703E-8}{\watt\per\meter\squared\per\kelvin\tothe{4}}$
 
+\subsection{Level variables}
+Level variable of a gaseous energy reservoir is the temperature:\\
+$\ddt\vartheta_{res}=\frac{\vartheta_{res} R}{pVc_v}\left\{c_p\overset{\ast}{m}_{in}\vartheta_{in}-c_p\overset{\ast}{m}_{out}\vartheta_{res}\pm\sum_{i=1}^n\overset{\ast}{Q}_i\right\}$
 
-\subsection{Example: Stirred Reactor System}
+Level variable of a solid energy reservoir is the temperature:\\
+$\ddt\vartheta_{res}=\frac{1}{m_{res} c_{res}}\left\{\sum_{i=1}^n\pm\overset{\ast}{Q}_i\right\}$
 
-\mypic{StirredReactor}
-
-\mportabflex{r@{ = }ll}{
-$\vartheta_i,\vartheta_o$&temperature inside and outside&$\si{\kelvin}$\\
-$m$&mass in the reactor&$\si{\kilo\gram}$\\
-$c$&specific heat of the reactor liquid&$\si{\joule\per\kilo\gram\per\kelvin}$\\
-$A$&active heat exchange surface&$\si{\meter\squared}$\\
-$k$&heat transfer coefficient&$\si{\watt\per\meter\squared\per\kelvin}$
-}
-
-
-\textbf{Assumptions:} 
-\begin{itemize}
-\item Reactor fluid has uniform temperature distribution and the temperature of the environment is constant.
-\item Heat exchanger can impose an arbitrary heat flux to the fluid.
-\item Heat flows through the reactors poorly insulated wall.
-\item Only relevant reservoir is the thermal heat stored in the liquid.
-\item Reaction is taking place inside the reactor is assumed to be neutral - no heat is generated or absorbed inside the reactor.
-\end{itemize}
-
-\begin{enumerate}
-\item \begin{tabular}{ll}Input:&controller input heat flow $u(t)=\overset{\ast}{Q}_{in}(t)$\\Output:&internal reactor temperature $\vartheta(t)=\vartheta_i(t)-\vartheta_o$\end{tabular}
-\item Reservoir: Internal energy stored $U(t)=m\cdot c\cdot \vartheta(t)$
-\item $\ddt U(t)=mc\ddt \vartheta(t)=\overset{\ast}{Q}_{in}(t)-\overset{\ast}{Q}_{out}(t)$
-\item $\overset{\ast}{Q}_{in}(t)=u(t)$
-
-$\overset{\ast}{Q}_{out}=k\cdot A\cdot\vartheta(t)$
-\item $mc\frac{d\vartheta(t)}{dt}=u(t)-kA\vartheta(t)$
-\end{enumerate}
-
-\columnbreak
-
-\subsection{Example: Heat exchanger}
-
-\mypic{HeatExchanger}
-
-\mportabflex{l@{ = }l}{
-$\ddt U_{1,j}$&$m_1c_1\frac{d\vartheta_{1o,j}(t)}{dt}=\overset{\ast}{m}_1c_1(\vartheta_{1i,j}(t)-\vartheta_{1o,j}(t))-\overset{\ast}{Q}_j(t)$\\
-$\ddt U_{2,j}$&$m_2c_2\frac{d\vartheta_{2o,j}(t)}{dt}=\overset{\ast}{m}_2c_2(\vartheta_{2i,j}(t)-\vartheta_{2o,j}(t))+\overset{\ast}{Q}_j(t)$
-}
-
-\mportant{$\overset{\ast}{Q}_j(t)=kA(\vartheta_{1o,j}(t)-\vartheta_{2o,j}(t))$}
-
-\subsection{Example: Gas receiver}
-
-\hlpink{Needed for every time variant pressure in a system!}
-
-\mypic{GasReceiver}
-
-\mportant{\textbf{Adiabatic conditions are assumed.}}
-
-\begin{enumerate}
-\item Input/Output: mass flows $\overset{\ast}{m}_{in/out}(t)$ and enthalpy flows $\overset{\ast}{H}_{in/out}(t)$\\
-\item Reservoirs: mass: $m(t)\quad$  internal energy $U(t)$ Level: $\vartheta(t)$
-\item $\ddt U(t)=\overset{\ast}{H}_{in}(t)-\overset{\ast}{H}_{out}(t)$
-
-$\ddt m(t)=\overset{\ast}{m}_{in}(t)-\overset{\ast}{m}_{out}(t)$
-\item $\ddt\vartheta=\frac{\vartheta R}{pVc_v}\left\{c_p\overset{\ast}{m}_{in}\vartheta_{in}-c_p\overset{\ast}{m}\vartheta-(\overset{\ast}{m}_{in}-\overset{\ast}{m}_{out})c_v\vartheta\right\}$
-
-$\ddt p(t)=\frac{\kappa R}{V}\left\{\overset{\ast}{m}_{in}(t)\vartheta_{in}(t)-\overset{\ast}{m}_{out}(t)\vartheta(t)\right\}$
-
-If isothermal: \\ $\ddt\vartheta(t)=0$ $ \Rightarrow \ddt p(t)=\frac{R\vartheta}{V}\left\{\overset{\ast}{m}_{in}(t)-\overset{\ast}{m}_{out}(t)\right\}$
-\end{enumerate}
+Level variable of a mass reservoir is the pressure:\\
+$\ddt p=\frac{R}{V}\left\{\overset{\ast}{m}_{in}\vartheta_{in}-\overset{\ast}{m}_{out}\vartheta\right\}$
 
 \subsection{1. Principle (Conservation of Energy)}
 
@@ -926,25 +865,73 @@ $dS$&$\left(\frac{\partial S}{\partial U}\right)_UdU+\left(\frac{\partial S}{\pa
 &$mC_v\frac{dT}{T}-mR\frac{dP}{P}$ (ideal gas)
 }
 
-\subsection{Isentropic process for a perfect gas}
-
-\important{$pV=nRT\qquad pV=mR_S T\qquad pv=RT$}
-
 Isentropic when $dS=0$
 
-\important{$PV^\gamma=const\qquad \gamma=\frac{C_{p,m}}{C_{v,m}}=\frac{C_p}{C_v}$}
+\subsection{Example: Stirred Reactor System}
 
-Where $\gamma=5/3$ for mono-atomic gas and $\gamma = 7/5$ for di-atomic gas.
+\mypic{StirredReactor}
 
-\mportabflex{r@{ = }l}{
-$(P,V):\ PV^\gamma$&$const$\\
-$(T,V):\ TV^{\gamma-1}$&$const$\\
-$(P,T):\ P^{\gamma-1}T^{\gamma}$&$const$\\
-$(P,T):\ P^{\frac{1-\gamma}{\gamma}}T$&$const$
+\mportabflex{r@{ = }ll}{
+$\vartheta_i,\vartheta_o$&temperature inside and outside&$\si{\kelvin}$\\
+$m$&mass in the reactor&$\si{\kilo\gram}$\\
+$c$&specific heat of the reactor liquid&$\si{\joule\per\kilo\gram\per\kelvin}$\\
+$A$&active heat exchange surface&$\si{\meter\squared}$\\
+$k$&heat transfer coefficient&$\si{\watt\per\meter\squared\per\kelvin}$
 }
 
-\vfill
-\null
+\textbf{Assumptions:} 
+\begin{itemize}
+\item Reactor fluid has uniform temperature distribution and the temperature of the environment is constant.
+\item Heat exchanger can impose an arbitrary heat flux to the fluid.
+\item Heat flows through the reactors poorly insulated wall.
+\item Only relevant reservoir is the thermal heat stored in the liquid.
+\item Reaction is taking place inside the reactor is assumed to be neutral - no heat is generated or absorbed inside the reactor.
+\end{itemize}
+
+\begin{enumerate}
+\item \begin{tabular}{ll}Input:&controller input heat flow $u(t)=\overset{\ast}{Q}_{in}(t)$\\Output:&internal reactor temperature $\vartheta(t)=\vartheta_i(t)-\vartheta_o$\end{tabular}
+\item Reservoir: Internal energy stored $U(t)=m\cdot c\cdot \vartheta(t)$
+\item $\ddt U(t)=mc\ddt \vartheta(t)=\overset{\ast}{Q}_{in}(t)-\overset{\ast}{Q}_{out}(t)$
+\item $\overset{\ast}{Q}_{in}(t)=u(t)$
+
+$\overset{\ast}{Q}_{out}=k\cdot A\cdot\vartheta(t)$
+\item $mc\frac{d\vartheta(t)}{dt}=u(t)-kA\vartheta(t)$
+\end{enumerate}
+
+\subsection{Example: Heat exchanger}
+
+\mypic{HeatExchanger}
+
+\mportabflex{l@{ = }l}{
+$\ddt U_{1,j}$&$m_1c_1\frac{d\vartheta_{1o,j}(t)}{dt}=\overset{\ast}{m}_1c_1(\vartheta_{1i,j}(t)-\vartheta_{1o,j}(t))-\overset{\ast}{Q}_j(t)$\\
+$\ddt U_{2,j}$&$m_2c_2\frac{d\vartheta_{2o,j}(t)}{dt}=\overset{\ast}{m}_2c_2(\vartheta_{2i,j}(t)-\vartheta_{2o,j}(t))+\overset{\ast}{Q}_j(t)$
+}
+
+\mportant{$\overset{\ast}{Q}_j(t)=kA(\vartheta_{1o,j}(t)-\vartheta_{2o,j}(t))$}
+
+\subsection{Example: Gas receiver}
+
+\hlpink{Needed for every time variant pressure in a system!}
+
+\mypic{GasReceiver}
+
+\mportant{\textbf{Adiabatic conditions are assumed.}}
+
+\begin{enumerate}
+\item Input/Output: mass flows $\overset{\ast}{m}_{in/out}(t)$ and enthalpy flows $\overset{\ast}{H}_{in/out}(t)$\\
+
+\item Reservoirs: mass: $m(t)\quad$  internal energy $U(t)$ Level: $\vartheta(t)$
+\item $\ddt U(t)=\overset{\ast}{H}_{in}(t)-\overset{\ast}{H}_{out}(t)$
+
+$\ddt m(t)=\overset{\ast}{m}_{in}(t)-\overset{\ast}{m}_{out}(t)$
+
+\item $\ddt\vartheta=\frac{\vartheta R}{pVc_v}\left\{c_p\overset{\ast}{m}_{in}\vartheta_{in}-c_p\overset{\ast}{m}_{out}\vartheta-(\overset{\ast}{m}_{in}-\overset{\ast}{m}_{out})c_v\vartheta\right\}$
+
+$\ddt p(t)=\frac{\kappa R}{V}\left\{\overset{\ast}{m}_{in}(t)\vartheta_{in}(t)-\overset{\ast}{m}_{out}(t)\vartheta(t)\right\}$
+
+If isothermal: \\ $\ddt\vartheta(t)=0$ $ \Rightarrow \ddt p(t)=\frac{R\vartheta}{V}\left\{\overset{\ast}{m}_{in}(t)-\overset{\ast}{m}_{out}(t)\right\}$
+\end{enumerate}
+
 \columnbreak
 
 \section{Valves}
@@ -1080,8 +1067,6 @@ Maximum power is not at maximum efficiency.
 
 $\Pi_C=\frac{p_2}{p_1}$: Compressor pressure ratio
 
-\vfill
-\null
 \columnbreak
 
 \section{Chemical systems}
