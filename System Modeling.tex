@@ -140,6 +140,21 @@ $\frac{d}{dt}(\text{reservoir content})=\sum\text{inflows}-\sum\text{outflows}$
 \item \textbf{Validate the model} with experiments that have not been used to identify the system parameters.
 \end{enumerate}
 
+\vfill
+
+\subsection{Holonomic vs. Non-holonomic Constraints}
+\begin{itemize}
+\item One single body with 1 DOF \dahe Euler method.
+\item Multiple connected bodies with multiple DOF:
+\begin{itemize}
+	\item Constrained through forces.
+	\item Constrained through position (Holonomic) \dahe Lagrange formalism (section \ref{lagrange}).
+	\item Constrained through velocities (Non-holonomic) \dahe Lagrange equations for constrained systems (section \ref{lagrange+}).
+\end{itemize}
+\end{itemize}
+
+\columnbreak
+
 \subsection{Normalization}
 	Replace the physical variables z(t),v(t) and w(t) by \textbf{normalized variables x(t), u(t) and y(t)}, which have a magnitude of $\approx$1.
 	
@@ -150,10 +165,6 @@ $\frac{d}{dt}(\text{reservoir content})=\sum\text{inflows}-\sum\text{outflows}$
 	y(t)&=g_0(x(t),u(t))
 	\end{align*}
 	
-\vfill
-\null
-\columnbreak
-
 \subsection{Linearization}
 	
 Linearize the system around an equilibrium point $(x_e,u_e)$, where $\frac{d}{dt}\vec{x}(t)=0$ and $\frac{d}{dt}y(t)=0$.
@@ -169,7 +180,10 @@ y(t)&=y_e+\delta y(t)&\text{ with  } &|\delta y(t)|\ll 1
 \delta y(t)&=\frac{\partial g_0}{\partial x}|_{x=x_e,u=u_e}\cdot\delta x(t) &+\frac{\partial g_0}{\partial u}|_{x=x_e,u=u_e}\cdot\delta u(t)
 \end{alignat*}
 	
-	
+\vfill
+\null
+\columnbreak
+
 \subsection{Example: Water Tank}
 
 \mypic{WaterTank}
@@ -396,7 +410,7 @@ $\frac{d}{dt}\varphi(t)$&$\omega_2(t)-\omega_1(t)$
 \null
 \columnbreak
 
-\section{Lagrange Formalism}
+\section{Lagrange Formalism}\label{lagrange}
 
 \subsection{Recipe}
 
@@ -484,7 +498,7 @@ u-ml\dot{q}_2^2\sin(q_2)\\mlg\sin(q_2)
 \null
 \columnbreak
 
-\subsection{Lagrange Equations for Constrained Systems}
+\subsection{Lagrange Equations for Constrained Systems}\label{lagrange+}
 
 \important{$\ddt\{\frac{\partial L}{\partial \dot{q}_k}\}-\frac{\partial L}{\partial q_k}-\sum\limits_{j=1}^\nu \mu_j\alpha_{j,k}=Q_k,\quad k=1,\ldots,n$}
 
@@ -542,7 +556,7 @@ $\frac{d\vec{p}}{dt}=m\frac{d\vec{v}}{dt}$&$=\vec{F}_{pressure}$&$+\vec{F}_{grav
 $\int_{tube}\vec{g}dm$&$g\int_{tube}(-\cos(\alpha)\vec{y}+\sin(\alpha)\vec{x})\rho\cdot A\cdot dl$\\
 &$\rho\cdot g\cdot A\left[\int_0^h -\frac{\cos(\alpha)}{\sin(\alpha)}\vec{y}+\int_0^h\frac{\sin(\alpha)}{\sin(\alpha)}dh\vec{x}\right]$\\
 &$-\rho g A(\tan\alpha)^{-1}h\vec{y}+\rho g Ah\vec{x}$\\
-$F_{r,x}(t)$&$\frac{1}{2}\rho v^2(t)\text{sign}[v(t)]\cdot\lambda(v(t))\frac{Al}{d}$}
+$F_{r,x}(t)$&$\frac{1}{2} \cdot \rho \cdot v^2(t) \cdot \frac{Al}{d} \cdot \text{sign}[v(t)] \cdot \lambda(v(t))$}
 
 \importname{\\ Dynamics along $\vec{x}$-axis ($\vec{v}=v \cdot \vec{e}_x$)}{
 $\rho A l\frac{dv(t)}{dt}=A(P_1-P_2)+\rho\cdot g\cdot A\cdot h-F_{R,x}$
@@ -726,6 +740,8 @@ $\vec{F}_1$&$I(t)BD\pi\vec{n}$\\
 
 \subsection{Internal Energy}
 
+\mportname{Internal energy}{$U(T_1)=m\cdot C\cdot T_1$}
+
 \important{$dU=\partial W+\partial Q$}
 
 For a closed system: During an arbitrary process, the variation of U is the sum of the work of external forces + thermal energy transferred by/to the system.
@@ -743,18 +759,16 @@ $dQ$&$mC_vdT\quad$ if process without change of volume\\
 $dQ$&$mC_pdT\quad$ if process without change of pressure
 }
 
-\importname{Melting}{$\dot{Q}=\dot{m}\cdot L_f\quad [L_f]=\si{\joule\per\kilo\gram}$}
-
 With $[C_v]=[C_p]=\si{\joule\per\kelvin\per\kilo\gram}$.
 
-\mportname{Internal energy}{$U(T_1)=m\cdot C\cdot T_1$}
+\importname{Melting}{$\dot{Q}=\dot{m}\cdot L_f\quad [L_f]=\si{\joule\per\kilo\gram}$}
 
 \subsection{Enthalpy}
 
 \important{$H=U+PV$}
 
 \mportabflex{r@{ = }r}{
-$dH$&$dU+P\cdot dV+V\cdot P$\\
+$dH$&$dU+P\cdot dV+V\cdot dP$\\
 &$\partial W+\partial Q+P\cdot dV+V\cdot dP$\\
 &$-PdV+mC_pdT+P\cdot dV+V\cdot dP$\\
 &$mC_pdT+V\cdot dP$
@@ -762,11 +776,11 @@ $dH$&$dU+P\cdot dV+V\cdot P$\\
 
 \important{$dH=mC_pdT+V\cdot dP$}
 
-\importname{isobaric Process}{$dH=mC_pdT=dU+PdV$}
+\importname{isobaric process}{$dH=mC_pdT=dU+PdV$}
 
-\mportant{$\overset{\ast}{H}(t)=\overset{\ast}{m}(t)C_p(T(t))T(t)$}
+\importname{isochoric process}{$dU=\partial Q_v=mC_vdT$}
 
-\importname{isochoric Process}{$dU=\partial Q_v=mC_vdT$}
+\mportname{Enthalpy flow}{$\overset{\ast}{H}(t)=\overset{\ast}{m}(t) \cdot C_p(T(t)) \cdot T(t)$}
 
 \subsection{Ideal gases}
 
@@ -1108,49 +1122,45 @@ Where $k^+$ pre-exponential factor, $E^+$ activation energy, Boltzmann term: $ex
 		\begin{minipage}{0.5\columnwidth}
 		\begin{center}\includegraphics[width=\columnwidth]{chem_2.png}\end{center}
            \end{minipage} \\
-Gegeben ist die Reaktion 
+Given the reactions:
 \begin{equation} N_2+O \leftrightarrow NO+N \end{equation}
 \begin{equation} O_2+N \leftrightarrow NO+O \end{equation}
-Mit der klassische Def. von $r_i^+$ folgt: \\
-\begin{minipage}{0.4\columnwidth}
+Using the definition of $r_i^+$ it follows: \\
 $\frac{d[NO]_1}{dt}=r_1^+[N_2][O]-r_1^-[NO][N]$\\
 $\frac{d[NO]_2}{dt}=r_2^+[O_2][N]-r_2^-[NO][O]$\\
 $\frac{d[N]_1}{dt}=r_1^+[N_2][O]-r_1^-[NO][N]$\\
 $\frac{d[N]_2}{dt}=r_2^-[NO][O]-r_2^+[O_2][N]$\\
-\end{minipage}
-\begin{minipage}{0.6\columnwidth}
-Durch Summieren:\\
+Adding up both contributions:\\
 $\frac{d[NO]}{dt}=r_1^+[N_2][O]-r_1^-[NO][N]+r_2^+[O_2][N]-r_2^-[NO][O]$\\
 $\frac{d[N]}{dt}=r_1^+[N_2][O]-r_1^-[NO][N]+r_2^-[NO][O]-r_2^+[O_2][N]$\\
-Falls man $\frac{d[N]}{dt}=0$ annimmt:\\
+
+Assuming $\frac{d[N]}{dt}=0$ the later equation leads to:\\
 $[N]=\frac{r_1^+[N_2][O]+r_2^-[NO][O]}{r_1^-[NO]+r_2^+[O_2]}$
-\end{minipage}
 
 \subsection{Example: SCR System}
-Katalytische Reduktion sehr wichtig f\"ur Diesel Motoren. Man reduziert $NO_x$ im Abgas mit $NH_3$, das durch Thermo/Hydrolyse gebildet wird. \\
+Selective catalytic reduction is an important process in the exhaust gas after treatment in diesel engines. The concentration of $NO_x$ particles is reduced by forming $NH_3$ through thermal decomposition and hydrolysis. \\
 \begin{minipage}{0.4\columnwidth}
 		\begin{center}\includegraphics[width=\columnwidth]{scr_1.png}\end{center}
            \end{minipage} 
  \begin{minipage}{0.6\columnwidth}
-		\begin{center}\includegraphics[width=0.5\columnwidth]{scr_2.png}\end{center}
+		\begin{center}\includegraphics[width=0.8\columnwidth]{scr_2.png}\end{center}
            \end{minipage} \\
-\textbf{Reaktionen:} $NH_3\leftrightarrow NH_3^*$ , $NH_3^*$: Absorbierte $NH_3$.\\
-\textbf{Hauptreaktion:} $NH_3^*+NO+\frac{1}{4}O_2 \rightarrow N_2+\frac{3}{2}H_2O$, Gleichzeitig $NH_3^*+\frac{3}{4}O_2\rightarrow \frac{1}{2}N_2+\frac{3}{2}H_2O$\\
-\textbf{Zustandsvariablen:} Temperatur Systems: $\vartheta$. $NO$ Gehalt: $[NO]$. $NH_3$ Gehalt: $[NH_3]$. Abs. Gehalt: $[NH_3^*]$.\\
-\textbf{DGL f\"ur $NH_3^*$:} $\frac{d}{dt}[NH_3^*]=r_{ads}\cdot [NH_3]-r_{des}\cdot [NH_3^*]-r_{SCR}\cdot [NO]\cdot [NH_3^*]-r_{ox}\cdot [NH_3^*]$\\
-\textbf{DGL f\"ur $NO$:} $\frac{d}{dt}n_{NO}=\dot{V}\cdot [NO_{in}]-\dot{V}\cdot [NO]-V\cdot r_{SCR}\cdot [NH_3^*]\cdot [NO]$. Man muss durch SCR Konverter Volumen dividieren: $\frac{d}{dt}[NO]=\frac{\dot{V}}{V}\cdot [NO_{in}]-\frac{\dot{V}}{V}\cdot [NO]-r_{SCR}\cdot [NH_3^*]\cdot [NO]$\\
+\textbf{Reactions:} $NH_3\leftrightarrow NH_3^*$ , where $NH_3^*$ is the absorbed $NH_3$, $NH_3^*+NO+\frac{1}{4}O_2 \rightarrow N_2+\frac{3}{2}H_2O$, $NH_3^*+\frac{3}{4}O_2\rightarrow \frac{1}{2}N_2+\frac{3}{2}H_2O$\\
+\textbf{State-variables:} System temperature: $\vartheta$. $NO$ concentration: $[NO]$. $NH_3$ concentration: $[NH_3]$, Amount of absorbed $NH_3^*$: $[NH_3^*]$.\\
+\textbf{PDE $NH_3^*$:} $\frac{d}{dt}[NH_3^*]=r_{ads}\cdot [NH_3]-r_{des}\cdot [NH_3^*]-r_{SCR}\cdot [NO]\cdot [NH_3^*]-r_{ox}\cdot [NH_3^*]$\\
+\textbf{PDE $NO$:} $\frac{d}{dt}n_{NO}=\dot{V}\cdot [NO_{in}]-\dot{V}\cdot [NO]-V\cdot r_{SCR}\cdot [NH_3^*]\cdot [NO]$.\\
+Dividing through the volume of the SCR converter: $\frac{d}{dt}[NO]=\frac{\dot{V}}{V}\cdot [NO_{in}]-\frac{\dot{V}}{V}\cdot [NO]-r_{SCR}\cdot [NH_3^*]\cdot [NO]$\\
 \textbf{Arrhenius Eq. :} $r_{ads}=k_{ads}e^{-\frac{E_{ads}}{R\vartheta}}$, $r_{des}=k_{des}e^{-\frac{E_{des}}{R\vartheta}}$, $r_{SCR}=k_{SCR}e^{-\frac{E_{SCR}}{R\vartheta}}$, $r_{ox}=k_{ox}e^{-\frac{E_{ox}}{R\vartheta}}$
 
 \subsection{Example: 3 Way Catalytic Converter}
-\begin{minipage}{0.5\columnwidth}
-\textbf{Reaktion:} $CO\leftrightarrow CO^*$, $O_2\rightarrow 2O^*$, $CO^*+O^*\rightarrow CO_2$\\
-\textbf{Zustandsvariablen :} $[O_2]$, $[CO]$, $[O_2^*]$, $[CO^*]$\\
-\textbf{DGL f\"ur $O^*$:} $\frac{d}{dt} [O^*]=2\cdot r_{O_2}[O_2]-r_{ox}[CO^*][O^*]$\\
-\textbf{DGL f\"ur $CO$:} $\frac{d}{dt}n_{CO}=\dot{V}[CO_{in}]-\dot{V}[CO]-Vr_{ads}[CO]+Vr_{des}[CO^*]$. Durch $V$ dividieren liefert $\frac{d}{dt}[CO]=\frac{\dot{V}}{V}[CO_{in}]-\frac{\dot{V}}{V}[CO]-r_{ads}[CO]+r_{des}[CO^*]$
-		        \end{minipage}
-		\begin{minipage}{0.5\columnwidth}
-		\begin{center}\includegraphics[width=0.67\columnwidth]{catal.png}\end{center}
-           \end{minipage}
+
+\includegraphics[width=0.75\columnwidth]{catal.png}
+
+\textbf{Reactions:} $CO\leftrightarrow CO^*$, $O_2\rightarrow 2O^*$, $CO^*+O^*\rightarrow CO_2$\\
+\textbf{State-variables:} $[O_2]$, $[CO]$, $[O_2^*]$, $[CO^*]$\\
+\textbf{PDE $O^*$:} $\frac{d}{dt} [O^*]=2\cdot r_{O_2}[O_2]-r_{ox}[CO^*][O^*]$\\
+\textbf{PDE $CO$:} $\frac{d}{dt}n_{CO}=\dot{V}[CO_{in}]-\dot{V}[CO]-Vr_{ads}[CO]+Vr_{des}[CO^*]$.\\
+Dividing by $V$ leads to $\frac{d}{dt}[CO]=\frac{\dot{V}}{V}[CO_{in}]-\frac{\dot{V}}{V}[CO]-r_{ads}[CO]+r_{des}[CO^*]$
            
 \vfill
 \null
@@ -1679,7 +1689,7 @@ $\ddt x(t)=$&$\dot{x}(t)$&$Ax(t)$&$Bu(t)$\\
 &$y(t)$&$Cx(t)$&$Du(t)$
 }
 
-\importname{Transfer function}{$P(s)=C\dot[sI-A]^{-1}\cdot B+D$}
+\importname{Transfer function}{$P(s)=C\cdot[sI-A]^{-1}\cdot B+D$}
 
 \mportant{$P(s)=\frac{Y(s)}{U(s)}=\textcolor{red}{k}\frac{s^{n-r}+\textcolor{orange}{b_{n-r-1}}s^{n-r-1}+\cdots+\textcolor{orange}{b_1} s+\textcolor{orange}{b_0}}{s^n+\textcolor{blue}{a_{n-1}}s^{n-1}+\textcolor{blue}{a_{n-2}}s^{n-2}+\cdots+\textcolor{blue}{a_2}s^2+\textcolor{blue}{a_1}s+\textcolor{blue}{a_0}}$}
 \begin{itemize}
@@ -1700,7 +1710,7 @@ This is the controller canonical form.
 
 \subsection{Zero Dynamics - Definition}
 
-The zero dynamics of a system correspond to its behaviour for special non-zero inputs $u^\ast(t)$ and initial conditions $x^\ast$ for which $y(t)$ is identical to zero for i finite interval.
+The zero dynamics of a system correspond to its behavior for special non-zero inputs $u^\ast(t)$ and initial conditions $x^\ast$ for which $y(t)$ is identical to zero for a finite interval.
 
 \begin{itemize}
 \ncompaq
