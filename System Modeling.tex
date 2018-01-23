@@ -1073,20 +1073,22 @@ $\Pi_C=\frac{p_2}{p_1}$: Compressor pressure ratio
 
 \mportant{$\alpha A + \beta B \leftrightarrow \gamma C + \delta D$}
 
-\important{$n_A=\SI{1}{\mole}=\SI{6.022e23}{}$}
+\important{$n=\SI{1}{\mole}=\SI{6.022e23}{}$}
 
-\importname{\note{Rate of formation left to right}}{$\frac{d^-}{dt}[A]=-\alpha\cdot r^-\cdot[A]^\alpha\cdot[B]^\beta$}
+\importname{\note{Rate of formation left to right}}{$\frac{d^+}{dt}[C]=\gamma\cdot r^+\cdot[A]^\alpha\cdot[B]^\beta$}
 
-\importname{\note{Rate of formation right to left}}{$\frac{d^+}{dt}[A]=\alpha\cdot r^+\cdot[C]^\gamma\cdot[D]^\delta$}
+\importname{\note{Rate of formation right to left}}{$\frac{d^-}{dt}[C]=-\gamma\cdot r^-\cdot[C]^\gamma\cdot[D]^\delta$}
 
-\importname{\note{\\Total rate of formation}}{$\ddt[A]=\alpha\left(r^+\cdot[C]^\gamma\cdot[D]^\delta-r^-\cdot[A]^\alpha\cdot[B]^\beta\right)$}
+\importname{\note{\\Total rate of formation}}{$\ddt[C]=\gamma\left(r^+\cdot[A]^\alpha\cdot[B]^\beta-r^-\cdot[C]^\gamma\cdot[D]^\delta\right)$}
 
-More A $\rightarrow$ stronger decomposition of A $\rightarrow$ pay attention to sign when negative feedback is happening!
+More C $\rightarrow$ stronger decomposition of C $\rightarrow$ pay attention to sign when negative feedback is happening!
 
 \important{Do not forget additional terms for open systems!}
 \mportant{$\ddt [C](t) = \frac{\overset{\ast}{m}_C}{M_C \cdot V_{reactor}}$}
 
 %\mportant{\dahe $\pm\frac{V^\ast}{V}\cdot [C]$}
+
+\importname{\note{\\Total rate of formation of the backward reaction}}{$\ddt[A]=\alpha\left(r^-\cdot[C]^\gamma\cdot[D]^\delta-r^+\cdot[A]^\alpha\cdot[B]^\beta\right)$}
 
 $r^+$ and $r^-$ depend on pressure and temperature:
 
@@ -1132,8 +1134,8 @@ Selective catalytic reduction is an important process in the exhaust gas after t
            \end{minipage} \\
 \textbf{Reactions:} $NH_3\leftrightarrow NH_3^*$ , where $NH_3^*$ is the absorbed $NH_3$, $NH_3^*+NO+\frac{1}{4}O_2 \rightarrow N_2+\frac{3}{2}H_2O$, $NH_3^*+\frac{3}{4}O_2\rightarrow \frac{1}{2}N_2+\frac{3}{2}H_2O$\\
 \textbf{State-variables:} System temperature: $\vartheta$. $NO$ concentration: $[NO]$. $NH_3$ concentration: $[NH_3]$, Amount of absorbed $NH_3^*$: $[NH_3^*]$.\\
-\textbf{PDE $NH_3^*$:} $\frac{d}{dt}[NH_3^*]=r_{ads}\cdot [NH_3]-r_{des}\cdot [NH_3^*]-r_{SCR}\cdot [NO]\cdot [NH_3^*]-r_{ox}\cdot [NH_3^*]$\\
-\textbf{PDE $NO$:} $\frac{d}{dt}n_{NO}=\dot{V}\cdot [NO_{in}]-\dot{V}\cdot [NO]-V\cdot r_{SCR}\cdot [NH_3^*]\cdot [NO]$.\\
+\textbf{PDE $NH_3^*$:} \\ $\frac{d}{dt}[NH_3^*]=r_{ads}\cdot [NH_3]-r_{des}\cdot [NH_3^*]-r_{SCR}\cdot [NO]\cdot [NH_3^*]-r_{ox}\cdot [NH_3^*]$\\
+\textbf{PDE $NO$:} \\ $\frac{d}{dt}n_{NO}=\dot{V}\cdot [NO_{in}]-\dot{V}\cdot [NO]-V\cdot r_{SCR}\cdot [NH_3^*]\cdot [NO]$.\\
 Dividing through the volume of the SCR converter: $\frac{d}{dt}[NO]=\frac{\dot{V}}{V}\cdot [NO_{in}]-\frac{\dot{V}}{V}\cdot [NO]-r_{SCR}\cdot [NH_3^*]\cdot [NO]$\\
 \textbf{Arrhenius Eq. :} $r_{ads}=k_{ads}e^{-\frac{E_{ads}}{R\vartheta}}$, $r_{des}=k_{des}e^{-\frac{E_{des}}{R\vartheta}}$, $r_{SCR}=k_{SCR}e^{-\frac{E_{SCR}}{R\vartheta}}$, $r_{ox}=k_{ox}e^{-\frac{E_{ox}}{R\vartheta}}$
 
@@ -1143,8 +1145,8 @@ Dividing through the volume of the SCR converter: $\frac{d}{dt}[NO]=\frac{\dot{V
 
 \textbf{Reactions:} $CO\leftrightarrow CO^*$, $O_2\rightarrow 2O^*$, $CO^*+O^*\rightarrow CO_2$\\
 \textbf{State-variables:} $[O_2]$, $[CO]$, $[O_2^*]$, $[CO^*]$\\
-\textbf{PDE $O^*$:} $\frac{d}{dt} [O^*]=2\cdot r_{O_2}[O_2]-r_{ox}[CO^*][O^*]$\\
-\textbf{PDE $CO$:} $\frac{d}{dt}n_{CO}=\dot{V}[CO_{in}]-\dot{V}[CO]-Vr_{ads}[CO]+Vr_{des}[CO^*]$.\\
+\textbf{PDE $O^*$:} \\ $\frac{d}{dt} [O^*]=2\cdot r_{O_2}[O_2]-r_{ox}[CO^*][O^*]$\\
+\textbf{PDE $CO$:} \\ $\frac{d}{dt}n_{CO}=\dot{V}[CO_{in}]-\dot{V}[CO]-Vr_{ads}[CO]+Vr_{des}[CO^*]$.\\
 Dividing by $V$ leads to $\frac{d}{dt}[CO]=\frac{\dot{V}}{V}[CO_{in}]-\frac{\dot{V}}{V}[CO]-r_{ads}[CO]+r_{des}[CO^*]$
            
 \vfill
@@ -1156,8 +1158,8 @@ Dividing by $V$ leads to $\frac{d}{dt}[CO]=\frac{\dot{V}}{V}[CO_{in}]-\frac{\dot
 Generated $CH_4$ pumped in storage tank by compressor at rate $\dot{m}_{CH_4}$. Combustion of $CH_4$ produces $CO_2$ and $H_2O$. The same amount of $CO_2$ is produced everywhere: the proces is carbon-neutral.\\
 \textbf{Reaction:} $4H_2+CO_2\leftrightarrow 2H_2O+CH_4$, Forward $r_M^+$, Backward $r_M^-$. \\
 \textbf{Mass-Flow:} The pressure after the valve $p_M$ is lower than the critical pressure $p_{cr}=\left( \frac{2}{\kappa_{H_2}+1} \right)^{\frac{\kappa_{H_2}}{\kappa_{H_2}-1}}\cdot p_E$. This means $\dot{m}_{H_2}=c_dA(t)\cdot \frac{p_E}{\sqrt{R\vartheta_E}}\cdot \sqrt{\kappa_{H_2}\cdot \left( \frac{2}{\kappa_{H_2}+1} \right)^{\frac{\kappa_{H_2}+1}{\kappa_{H_2}-1}}}$\\
-\textbf{DGL f\"ur $H_2$:} $\frac{d[H_2]}{dt}=-4r_M^+[H_{2,M}]^4[CO_{2,M}]+4r_M^-[CH_4][H_2O]^2+\frac{\dot{m}_{H_2}(t)}{V_MM_{H_2}}$\\
-\textbf{DGL f\"ur $CH_4$:} $\frac{d[H_2]}{dt}=r_M^+[H_{2,M}]^4[CO_{2,M}]-r_M^-[CH_4][H_2O]^2-\frac{\dot{m}_{CH_4}(t)}{V_MM_{CH_4}}$\\
+\textbf{PDE $H_2$:} \\ $\frac{d[H_2]}{dt}=-4r_M^+[H_{2,M}]^4[CO_{2,M}]+4r_M^-[CH_4][H_2O]^2+\frac{\dot{m}_{H_2}(t)}{V_MM_{H_2}}$\\
+\textbf{PDE $CH_4$:} \\ $\frac{d[H_2]}{dt}=r_M^+[H_{2,M}]^4[CO_{2,M}]-r_M^-[CH_4][H_2O]^2-\frac{\dot{m}_{CH_4}(t)}{V_MM_{CH_4}}$\\
 As the throttle is isenthalpic, the temperatur of the $H_2$ after the throttle is $\vartheta_E$. Thus, the enthalpy of the $H_2$ entering the mathanation reactor is given by $\dot{H}_{H_2,M,in}=\vartheta_E\cdot c_{p,H_2}\cdot \dot{m}_{H_2}(t)$ and $\dot{H}_{H_CH_4,M,out}=\vartheta_M\cdot c_{p,CH_4}\cdot \dot{m}_{CH_4}(t)$
 
 \vfill
@@ -1248,16 +1250,21 @@ Used to fit the parameters of a \textbf{linear} and \textbf{static} model.
 
 \begin{itemize}
 \ncompaq
-\item Index of discrete time: k
+\item Index of discrete time: $k\in[1,...,r]$
+\item Where $r$ is the number of measurements taken.
 \item Input vector: $\mathbf{u}(k)\in\mathbb{R}^m$
-\item Output signal: $y(k)\in\mathbb{R}$
-\item Vector of unknown parameter: $\mathbf{\pi}\in\mathbb{R}^q$
+\item Output signal/measurement values: $y(k)\in\mathbb{R}$
+\item y should be chosen such that it contains the measurement with the most significant error which we want to minimise.
+\item Vector of unknown/sought parameters: $\pi\in\mathbb{R}^q$
 \item Regressor: $\mathbf{h[.]}\in\mathbb{R}^q$
-\item r = number of measurements taken
-\item Typically $r\gg q$
+\item (Measurement) error: $e(k)\in\mathbb{R}$
+\item Typically more measurements than unknown parameters \dahe $r\gg q$
 \end{itemize}
 
-y should be chosen such that it contains the measurement with the most significant error which we want to minimise.
+The error between all the observed and expected outputs is then given by:
+\mportant{$\tilde{e} = \tilde{y} - H \cdot \pi$}
+
+\columnbreak
 
 We want to minimise the following equation:
 
@@ -1267,8 +1274,6 @@ Where $W = \text{diag} (w_1, ..., w_n)$ is a symmetric, positive definite weight
 If all measurements are equally reliable, one can choose $W=\mathbb{I}$.
 
 \important{$\pi_{LS}=[H^T\cdot W\cdot H]^{-1}H^T\cdot W\cdot \tilde{y}$}
-
-\mypic{LSQ}
 
 Where H must have full column rank \dahe all q parameters ($\pi_1,\pi_2,\ldots,\pi_q)$ are required to explain the data.
 
@@ -1288,6 +1293,8 @@ Then:
 \end{itemize}
 
 \important{$\A^{-1}=\begin{bmatrix}a&b\\c&d\end{bmatrix}^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$}
+
+\mypic{LSQ}
 
 \subsubsection{Examples: Straight line and parabola}
 \begin{itemize}
@@ -1688,7 +1695,7 @@ $\ddt x(t)=$&$\dot{x}(t)$&$Ax(t)$&$Bu(t)$\\
 
 \mportabflex{l@{ = }l}{
 $\ddt x(t)$&$\begin{bmatrix}0&1&0&\cdots&0\\0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\cdot&\vdots\\0&0&0&\cdots&1\\-\textcolor{blue}{a_0}&-\textcolor{blue}{a_1}&-\textcolor{blue}{a_2}&\cdots&-\textcolor{blue}{a_{n-1}}\end{bmatrix}x(t)+\begin{bmatrix}0\\0\\\vdots\\0\\\textcolor{red}{k}\end{bmatrix}u(t)$\\
-$y(t)$&$\begin{bmatrix}\textcolor{orange}{b_0}&\cdots&\textcolor{orange}{b_{n-r-1}}&\textcolor{orange}{1}&1&0\cdots&0\end{bmatrix}x(t)=\textcolor{orange}{C}x(t)$
+$y(t)$&$\begin{bmatrix}\textcolor{orange}{b_0}&\cdots&\textcolor{orange}{b_{n-r-1}}&\textcolor{orange}{1}&0\cdots&0\end{bmatrix}x(t)=\textcolor{orange}{C}x(t)$
 }
 
 This is the controller canonical form.
